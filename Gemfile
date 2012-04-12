@@ -1,14 +1,19 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
+gem 'execjs'
+gem 'haml'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
-  gem 'sqlite3'
+  gem 'pg'
 end
 
+group :production do
+  gem 'therubyracer'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -57,3 +62,4 @@ gem 'fog'
 
 # Postgres support (added for Heroku)
 gem 'pg'
+gem 'will_paginate'
