@@ -1,0 +1,13 @@
+<% @ifso = "<span class='ifso'></span><span class='books'></span>" %>
+<section id="top_bar_content">
+  <span class ="home_top">
+    "A book isn't an object, it's an experience that happens in your head and in your heart"
+  </span>
+</section>
+
+<section id='body_content'>
+  <p id="home_text"><%= @ifso.html_safe %>  are <strong>literature happenings</strong>. You read them, watch them, contribute to them, write to them and they write back to you. And then if you want, you can print them, bind them, share them, keep them.</p>
+</section>
+<section id='side_body_content'>
+  <%=raw @page.content_for(:side_body) %>
+</section>

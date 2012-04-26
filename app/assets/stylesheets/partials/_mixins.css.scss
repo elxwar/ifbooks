@@ -1,0 +1,49 @@
+$iforange: #f68d1f;
+$ifgreen: #87c440;
+$ifblack: #231f20;
+$ifdarkgreen: #14783a;
+$georgia: Georgia,Utopia,Palatino,'Palatino Linotype',Times, "Times New Roman",serif;
+$sanserif: Arial,FreeSans,Helvetica,sans-serif;
+
+@mixin def-body-text {
+  font: {
+    family: $sanserif;
+    size: 14px;
+  }
+  color: $ifblack;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+@mixin large-text($size: 24px) {
+  font: {
+    family: $sanserif;
+    size: $size;
+    weight: normal;
+  }
+  color: $ifblack;
+  line-height: 30px;
+}
+
+@mixin large-green-italic {
+  @include large-text;
+  font: {
+    family: $georgia;
+    style: italic;
+  }
+  color: $ifdarkgreen;
+  text-align: center;
+}
+
+.ifso:before {
+  content: "ifso";
+  color: $iforange;
+  font-weight: bold;
+}
+
+.books:before {
+  content: "books";
+  color: $ifgreen;
+  font-weight: bold;
+}
+
