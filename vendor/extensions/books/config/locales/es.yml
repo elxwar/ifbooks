@@ -1,0 +1,32 @@
+es:
+  refinery:
+    plugins:
+      books:
+        title: Books
+#        article: masculino/femenino
+    books:
+      admin:
+        books:
+          actions:
+            create_new: Crear nuevo book
+            reorder: Reordenar books
+            reorder_done: Reordenación de books completada
+          records:
+            title: Books
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay books todavía. Pulsa en "Crear nuevo Book" para crear tu primer book.
+          book:
+            view_live_html: Ver este book como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este book
+            delete: Borrar este book para siempre
+      books:
+        show:
+          other: Otros books
+  activerecord:
+    attributes:
+      'refinery/books/book':
+        title: Title
+        author: Author
+        description: Description
+        photo: Photo
+        date: Date

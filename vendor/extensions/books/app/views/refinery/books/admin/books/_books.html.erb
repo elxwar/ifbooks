@@ -1,0 +1,2 @@
+<%= will_paginate @books if Refinery::Books::Admin::BooksController.pageable? %>
+<%= render 'sortable_list' %>

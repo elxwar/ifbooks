@@ -1,0 +1,31 @@
+nl:
+  refinery:
+    plugins:
+      books:
+        title: Books
+    books:
+      admin:
+        books:
+          actions:
+            create_new: Maak een nieuwe Book
+            reorder: Wijzig de volgorde van de Books
+            reorder_done: Klaar met het wijzingen van de volgorde van de Books
+          records:
+            title: Books
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Books. Druk op 'Maak een nieuwe Book' om de eerste aan te maken.
+          book:
+            view_live_html: Bekijk deze book op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze book
+            delete: Verwijder deze book voor eeuwig
+      books:
+        show:
+          other: Andere Books
+  activerecord:
+    attributes:
+      'refinery/books/book':
+        title: Title
+        author: Author
+        description: Description
+        photo: Photo
+        date: Date

@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="books">
+    <% @books.each do |book| %>
+      <li>
+        <%= link_to book.title, refinery.books_book_path(book) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

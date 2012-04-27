@@ -1,0 +1,31 @@
+nb:
+  refinery:
+    plugins:
+      books:
+        title: Books
+    books:
+      admin:
+        books:
+          actions:
+            create_new: Lag en ny Book
+            reorder: Endre rekkefølgen på Books
+            reorder_done: Ferdig å endre rekkefølgen Books
+          records:
+            title: Books
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Books enda. Klikk på "Lag en ny Book" for å legge til din første book.
+          book:
+            view_live_html: Vis hvordan denne book ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne book
+            delete: Fjern denne book permanent
+      books:
+        show:
+          other: Andre Books
+  activerecord:
+    attributes:
+      'refinery/books/book':
+        title: Title
+        author: Author
+        description: Description
+        photo: Photo
+        date: Date

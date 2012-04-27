@@ -1,0 +1,31 @@
+en:
+  refinery:
+    plugins:
+      books:
+        title: Books
+    books:
+      admin:
+        books:
+          actions:
+            create_new: Add New Book
+            reorder: Reorder Books
+            reorder_done: Done Reordering Books
+          records:
+            title: Books
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Books yet. Click "Add New Book" to add your first book.
+          book:
+            view_live_html: View this book live <br/><em>(opens in a new window)</em>
+            edit: Edit this book
+            delete: Remove this book forever
+      books:
+        show:
+          other: Other Books
+  activerecord:
+    attributes:
+      'refinery/books/book':
+        title: Title
+        author: Author
+        description: Description
+        photo: Photo
+        date: Date

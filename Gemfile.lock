@@ -1,3 +1,9 @@
+PATH
+  remote: vendor/extensions
+  specs:
+    refinerycms-books (1.0)
+      refinerycms-core (~> 2.0.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -217,6 +223,7 @@ DEPENDENCIES
   pg
   rails (= 3.2.3)
   refinerycms (~> 2.0.0)
+  refinerycms-books!
   refinerycms-i18n (~> 2.0.0)
   refinerycms-wymeditor (~> 0.0.1)
   sass-rails (~> 3.2.3)

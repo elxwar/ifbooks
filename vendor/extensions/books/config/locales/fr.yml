@@ -1,0 +1,31 @@
+fr:
+  refinery:
+    plugins:
+      books:
+        title: Books
+    books:
+      admin:
+        books:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Book
+            reorder: Réordonner les Books
+            reorder_done: Fin de réordonnancement des Books
+          records:
+            title: Books
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Book. Cliquer sur "Créer un(e) nouve(au/l/lle) Book" pour créer votre premi(er/ère) book.'
+          book:
+            view_live_html: Voir ce(t/tte) book <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) book
+            delete: Supprimer définitivement ce(t/tte) book
+      books:
+        show:
+          other: Autres Books
+  activerecord:
+    attributes:
+      'refinery/books/book':
+        title: Title
+        author: Author
+        description: Description
+        photo: Photo
+        date: Date
