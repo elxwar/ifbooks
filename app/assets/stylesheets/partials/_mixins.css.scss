@@ -12,7 +12,7 @@ $sanserif: Arial,FreeSans,Helvetica,sans-serif;
   }
   color: $ifblack;
   line-height: 20px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 @mixin large-text($size: 24px) {
@@ -35,15 +35,5 @@ $sanserif: Arial,FreeSans,Helvetica,sans-serif;
   text-align: center;
 }
 
-.ifso:before {
-  content: "ifso";
-  color: $iforange;
-  font-weight: bold;
-}
 
-.books:before {
-  content: "books";
-  color: $ifgreen;
-  font-weight: bold;
-}
 

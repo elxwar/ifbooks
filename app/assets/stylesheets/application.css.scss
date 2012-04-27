@@ -61,6 +61,23 @@ body {
   //color: #333;
   padding: 20px 20px 20px 67px;
   @include def-body-text;
+  ul {padding-left: 18px;}
+  li {
+    list-style: none;
+    margin-bottom: 5px;
+    &:before {
+      content: '\2022';
+      display: block;
+      position: relative;
+      max-width: 0px;
+      max-height: 0px;
+      left: -17px;
+      top: -0px;
+      color: $iforange;
+      font-size: 35px;
+    }
+    
+  }
   
 }
 
@@ -69,11 +86,25 @@ body {
   padding: 20px 20px 20px 45px;
 }
 
-.home_top {
+.ifso-lrg-green-italic {
   @include large-green-italic;
 }
 
-#home_text {
+.ifso-v-lrg-text {
   @include large-text(20px);
 }
 
+.ifso-bold-orange {
+  color: $iforange;
+  font-weight: bold;
+}
+
+.ifso-bold-green {
+  color: $ifgreen;
+  font-weight: bold;
+}
+
+.ifso-bigger-bolder {
+  @include large-text;
+  font-weight: bold;
+}
