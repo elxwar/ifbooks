@@ -1,8 +1,24 @@
-<% @ifso = "<span class='ifso-fonts-bold-orange'>ifso</span><span class='ifso-fonts-bold-green'>books</span>" %>
-<%= render 'default.html' %>
+<section id="top_bar_content">
+  <%=raw @page.content_for(:top_bar) %>
+</section>
+
+<section id='body_content'>
+  <%=raw @page.content_for(:body) %>
+</section>
 
 
-<%#*<section id='side_body_content'>%>
+<section id='side_body_content'>
   <%#=raw @page.content_for(:side_body) %>
+  <ul id="books">
+  <% @books.each do |book| %>
+    <li>
+      <%= link_to book.title, refinery.books_book_path(book) %><br />
+      by <%=  book.author %><br />
+      <%=  book.description.html_safe %><br />
+      <%= image_fu book.photo, nil %>
+    </li>
+  <% end %>
+</ul>
 
-<%#*</section>%>
+
+</section>
