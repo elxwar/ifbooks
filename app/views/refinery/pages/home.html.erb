@@ -8,14 +8,19 @@
 
 
 <section id='side_body_content'>
-  <%#=raw @page.content_for(:side_body) %>
+  <span class="ifso-bigger-bolder">Click on our titles</span>
   <ul id="books">
   <% @books.each do |book| %>
-    <li>
-      <%= link_to book.title, refinery.books_book_path(book) %><br />
-      by <%=  book.author %><br />
-      <%=  book.description.html_safe %><br />
+    <li style="<%= cycle('background-color:#e4f1d4;','background-color:#c7eafc;') -%>">
       <%= image_fu book.photo, nil %>
+      <div class="book_details">
+        <%= link_to book.title, refinery.books_book_path(book) %><br />
+        <% if book.author? %>
+          by <%=  book.author %><br />
+        <% end %>
+        <%=  book.description.html_safe %><br />
+      </div>
+      
     </li>
   <% end %>
 </ul>     
