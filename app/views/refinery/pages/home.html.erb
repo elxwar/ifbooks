@@ -14,7 +14,8 @@
     <li style="<%= cycle('background-color:#e4f1d4;','background-color:#c7eafc;') -%>">
       <%= image_fu book.photo, nil %>
       <div class="book_details">
-        <%= link_to book.title, refinery.books_book_path(book) %><br />
+        <%= link_to content_tag(:span), refinery.books_book_path(book) %><br />
+        <%= book.title %><br />
         <% if book.author? %>
           by <%=  book.author %><br />
         <% end %>
