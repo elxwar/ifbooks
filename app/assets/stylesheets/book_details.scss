@@ -56,10 +56,10 @@ Purpose of the stylesheet follows.
   
   .book_findout {
    @extend .book_author;
-   float:right;
+   float:left;
    margin: {
-    top: 1.5em;
-    right: 1.917em;
+    top: 1.43em;
+    left: 1.1em;
    }
 
   }
