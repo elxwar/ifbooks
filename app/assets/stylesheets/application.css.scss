@@ -15,9 +15,7 @@
 
 body {
 	  background: #fff;
-	  font-family: $sanserif;
-	  font-size: 14px;
-	  line-height: 18px;
+    @include def-body-text;
     margin: 0;
 }
 
@@ -35,7 +33,7 @@ body {
   padding: 0px;
   margin: 0 0 0 124px;
   padding-bottom: 30px;
-  font-size: 15px;
+  font-size: 1em;
   //font-weight: bold;
   li {
     float: left;
@@ -83,7 +81,7 @@ body {
   #books {
     padding-left: 0px;
     li {
-      position: relative;
+      //position: relative;
       overflow:hidden;
       :before {
         content: none;
@@ -92,12 +90,13 @@ body {
       clear:left;
       img {float:left;}
     }
-    span{
+    .book_container{ position: relative;}
+    .book_container span{
       width: 100%;
       height: 100%;
       position: absolute;
       z-index:2;
-      top:0px;
+      top: 0px;
       left: 0px;
     }
   }
@@ -115,7 +114,11 @@ body {
   letter-spacing:0;
 }
 
-
+footer {
+  text-align: center;
+  font-size: 0.571em;
+  color: $ifblack * 5;
+}
 
 //STYLES FOR Refinery wymeditor dropdown
 .ifso-lrg-green-italic {
@@ -123,9 +126,9 @@ body {
 }
 
 .ifso-v-lrg-text {
-  @include large-text(21px);
-  letter-spacing: 0.3px;
-  line-height: 28px;
+  @include large-text(1.50em);
+  letter-spacing: 0.014em;
+  line-height: 1.4em;
 }
 
 .ifso-bold-orange {

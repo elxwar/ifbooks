@@ -8,21 +8,38 @@
 
 
 <section id='side_body_content'>
-  <span class="ifso-bigger-bolder">Click on our titles</span>
+  <span class="ifso-bigger-bolder">Click on our titles:</span>
   <ul id="books">
   <% @books.each do |book| %>
-    <li style="<%= cycle('background-color:#e4f1d4;','background-color:#c7eafc;') -%>">
-      <%= image_fu book.photo, nil %>
-      <div class="book_details">
-        <%= link_to content_tag(:span), refinery.books_book_path(book) %><br />
-        <%= book.title %><br />
-        <% if book.author? %>
-          by <%=  book.author %><br />
-        <% end %>
-        <%=  book.description.html_safe %><br />
-      </div>
-      
-    </li>
+    <div class="book_container">
+      <%#= link_to content_tag(:span), refinery.books_book_path(book) %><br />
+      <li class="<%= cycle('book-grn-bkg','book-blue-bkg') -%>">
+
+        <%= image_fu book.photo, nil %>
+        <div class="book_details">
+
+          <div class='book_title'>
+            <%= book.title %>
+          </div>
+          <div class="book_author">
+            <% if book.author? %>
+              By <%=  book.author %>
+            <% end %>
+          </div>
+          <div class="book_desc">
+            <%=  book.description.html_safe %>
+            <% if !book.author? %>
+              <br />
+            <% end %>
+          </div>
+        </div>
+        <div class="book_buttons">
+          <a href="<%= refinery.books_book_path(book) %>" class="button">SCHOOLS</a> 
+          <a href="<%= refinery.books_book_path(book) %>" class="button">BOOK GROUPS</a>
+        </div>
+        <div class="book_findout">Click to find out more</div>
+      </li>
+    </div>   
   <% end %>
 </ul>     
 

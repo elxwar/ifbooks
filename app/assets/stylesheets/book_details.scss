@@ -1,0 +1,97 @@
+/*
+Document   : book_details
+Created on : 30-Apr-2012, 07:40:17
+Author     : eric
+Description:
+Purpose of the stylesheet follows.
+*/
+
+@import "./partials/mixins";
+
+
+#books {
+  padding-left: 0px;
+  ul {padding-left: 0;}
+  li {
+    //position: relative;
+    overflow:hidden;
+    :before {
+      content: none;
+      left: 0px;
+    }
+    clear:left;
+    img {
+      float:left;
+      margin: 1px 10px 1px 1px;
+    }
+  }
+  .book_container{ 
+    position: relative;
+    margin: {
+      top: -24px;
+      bottom: 19px;
+    }
+  }
+/*  .book_container span{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index:2;
+    top: 0px;
+    left: 0px;
+  }*/
+  .book_title{
+   @include large-text(2.429em);
+   margin-top: 6px;
+   line-height: 1.118em;
+  }
+  .book_author{
+    font-size: 0.857em;
+    letter-spacing: 0px;
+  }
+  .book_desc{
+    font-size: 1.143em;
+    p {margin:{top:1px; bottom:11px;}}
+  }
+  
+  .book_findout {
+   @extend .book_author;
+   float:right;
+   margin: {
+    top: 1.5em;
+    right: 1.917em;
+   }
+
+  }
+  
+  .book_buttons{
+    float:left;
+  }
+  .button {
+    @include border-radius-all(35px);
+    @include box-sizing(border-box);
+    float:left;
+    margin: 0;
+    padding: 1px 9px 1px 9px;
+    width: 135px;
+    background-color: $iforange;
+    border: 1px solid $ifblack;
+    font-size: 100%;
+    text-align: center;
+    line-height: 1.384615385em;
+    vertical-align: baseline;
+    text-decoration: none;
+    color: white;
+    &:first-child {margin-bottom: 7px;}
+    &:last-child {clear: left;}
+  }
+
+}
+
+.book-grn-bkg{
+  @include book-details-bkg($pale_green, $ifgreen); 
+}
+
+.book-blue-bkg{
+  @include book-details-bkg($pale_blue, $ifblue);
+}

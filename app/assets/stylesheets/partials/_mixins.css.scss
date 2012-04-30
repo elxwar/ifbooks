@@ -2,27 +2,32 @@ $iforange: #f68d1f;
 $ifgreen: #87c440;
 $ifblack: #231f20;
 $ifdarkgreen: #14783a;
+$ifblue: #00aeef;
+$pale_green: #e4f1d4;
+$pale_blue: #c7eafc;
 $georgia: Georgia,Utopia,Palatino,'Palatino Linotype',Times, "Times New Roman",serif;
 $sanserif: Arial,FreeSans,Helvetica,sans-serif;
+
+
 
 @mixin def-body-text {
   font: {
     family: $sanserif;
-    size: 14px;
+    size: 0.933em;
   }
   color: $ifblack;
-  line-height: 20px;
-  letter-spacing: 0.5px;
+  line-height: 1.429em;
+  letter-spacing: 0.036em;
 }
 
-@mixin large-text($size: 24px) {
+@mixin large-text($size: 1.6em) {
   font: {
     family: $sanserif;
     size: $size;
     weight: normal;
   }
   color: $ifblack;
-  line-height: 30px;
+  line-height: 1.25em;
 }
 
 @mixin large-green-italic {
@@ -31,9 +36,30 @@ $sanserif: Arial,FreeSans,Helvetica,sans-serif;
     family: $georgia;
     style: italic;
   }
+  letter-spacing: 0;
   color: $ifdarkgreen;
   text-align: center;
 }
 
+@mixin book-details-bkg($bgcolor: #fff, $bordercolor: $ifgreen) { 
+  background-color: $bgcolor;
+  border: {
+    style: solid;
+    width: 1px;
+    color: $bordercolor;
+  }
+}
 
+@mixin border-radius-all($n) {
+    -moz-border-radius: $n;
+    -webkit-border-radius: $n;
+    -o-border-radius: $n;
+    border-radius: $n;
+}
+
+@mixin box-sizing($n) {
+    -webkit-box-sizing: $n;
+    -moz-box-sizing: $n;
+    box-sizing: $n;
+}
 
