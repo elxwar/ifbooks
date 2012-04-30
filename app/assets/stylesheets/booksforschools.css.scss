@@ -1,0 +1,32 @@
+/*
+Document   : booksforschools.css
+Created on : 30-Apr-2012, 17:51:57
+Author     : eric
+Description:
+Purpose of the stylesheet follows.
+*/
+
+@import "./partials/mixins";
+
+.schools {
+  background-color:$ifdarkgreen;
+}
+
+#left_margin {
+/*  position:absolute;
+  left:0;*/
+  clear:left;
+  float:left;
+  margin-top: -37px;
+}
+
+#title_bar_content {
+  float:left;
+  max-width: 650px;
+  min-width: 440px;
+  text-align: center;
+  @include large-text(2.50em);
+  letter-spacing: 0.014em;
+  line-height: 1.4em;
+  color: $ifyellow;
+}

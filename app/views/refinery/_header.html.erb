@@ -1,4 +1,10 @@
-<h1 id='logo'>
+<%# if @page[:title][0,6]=="School" or @page[:title][0,5]=="Books" %>
+  <%# @logo = 'logoforschools' %>
+<%# else %>
+  <%# @logo = 'logo' %>
+<%# end %>
+
+<h1 id= <%=@logo%>>
 
 </h1>
 <%= render(:partial => "/refinery/menu", :locals => {

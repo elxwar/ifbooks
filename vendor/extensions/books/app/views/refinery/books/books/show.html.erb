@@ -1,51 +1,62 @@
-<% content_for :body_content_title do %>
-  <%= @book.title %>
-<% end %>
+<div class="container schools">
+  <section id ="left_margin">
+    <%= image_tag 'storyParkSide.png' %>
 
-<% content_for :body_content_left do %>
-  <section>
-    <h1>Title</h1>
-    <p>
-      <%=raw @book.title %>
-    </p>
   </section>
-  <section>
-    <h1>Author</h1>
-    <p>
-      <%=raw @book.author %>
-    </p>
-  </section>
-  <section>
-    <h1>Description</h1>
-    <p>
-      <%=raw @book.description %>
-    </p>
-  </section>
-  <section>
-    <h1>Photo</h1>
-    <p>
-      <%= image_fu @book.photo, nil %>
-    </p>
-  </section>
-  <section>
-    <h1>Date</h1>
-    <p>
-      <%=raw @book.date %>
-    </p>
-  </section>
-<% end %>
 
-<% content_for :body_content_right do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="books">
-      <% @books.each do |book| %>
-        <li>
-          <%= link_to book.title, refinery.books_book_path(book) %>
-        </li>
-      <% end %>
-    </ul>
-  </aside>
-<% end %>
+  <section id="title_bar_content">
+    <%= @book.title %>
+  </section>
 
-<%= render '/refinery/content_page' %>
+  <% content_for :body_content_title do %>
+    <%= @book.title %>
+  <% end %>
+
+  <% content_for :body_content_left do %>
+    <section>
+      <h1>Title</h1>
+      <p>
+        <%=raw @book.title %>
+      </p>
+    </section>
+    <section>
+      <h1>Author</h1>
+      <p>
+        <%=raw @book.author %>
+      </p>
+    </section>
+    <section>
+      <h1>Description</h1>
+      <p>
+        <%=raw @book.description %>
+      </p>
+    </section>
+    <section>
+      <h1>Photo</h1>
+      <p>
+        <%= image_fu @book.photo, nil %>
+      </p>
+    </section>
+    <section>
+      <h1>Date</h1>
+      <p>
+        <%=raw @book.date %>
+      </p>
+    </section>
+  <% end %>
+
+  <% content_for :body_content_right do %>
+    <aside>
+      <h2><%= t('.other') %></h2>
+      <ul id="books">
+        <% @books.each do |book| %>
+          <li>
+            <%= link_to book.title, refinery.books_book_path(book) %>
+          </li>
+        <% end %>
+      </ul>
+    </aside>
+  <% end %>
+
+  <%= render '/refinery/content_page' %>
+</div>
