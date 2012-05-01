@@ -2,3 +2,13 @@
   <%= t('.copyright', :year => Time.now.year,
                       :site_name => Refinery::Core.site_name) %>
 </p>
+<p>
+  <pre> 
+    <%#= javascript_include_tag 'prototype' %> 
+    <% if ENV['RAILS_ENV'] == 'development' %> 
+        <div id="debug" style="margin: 40px 5px 5px 5px;"> 
+            <%= debug session %> <%= debug params %>
+        </div>
+    <% end %>
+  </pre>
+</p>

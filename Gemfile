@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.3'
 gem 'execjs'
 gem 'haml'
-gem 'fog'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
