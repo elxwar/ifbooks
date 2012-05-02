@@ -9,7 +9,7 @@ if (typeof(custom_wymeditor_boot_options) == "undefined") { custom_wymeditor_boo
     , {name: 'image-align', rules:[{name: 'left', title: '{Left}'}, {name: 'right', title: '{Right}'}], join: '-', title: '{Image_Align}'}
     , {name: 'font-size', rules:[{name: 'small', title: '{Small}'}, {name: 'normal', title: '{Normal}'}, {name: 'large', title: '{Large}'}], join: '-', title: '{Font_Size}'}
     , {name: 'ifso', rules:['bigger-bolder', 'v-lrg-text', 'bold-green', 'bold-orange', 'lrg-green-italic'], join: '-'}
-    
+    , {name: 'books', rules:['white-text', 'author-image-plus-text', 'intro-para'], join: '-'}
   ]
 }; }
 

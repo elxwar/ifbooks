@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120501104450) do
+ActiveRecord::Schema.define(:version => 20120502115827) do
 
   create_table "refinery_books", :force => true do |t|
     t.string   "title"
@@ -20,8 +20,12 @@ ActiveRecord::Schema.define(:version => 20120501104450) do
     t.integer  "photo_id"
     t.datetime "date"
     t.integer  "position"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.integer  "margin_image_id"
+    t.text     "description_for_schools"
+    t.text     "description_for_groups"
+    t.string   "video_url"
   end
 
   create_table "refinery_images", :force => true do |t|

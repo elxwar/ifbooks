@@ -19,14 +19,36 @@ Purpose of the stylesheet follows.
   float:left;
   margin-top: -37px;
 }
+.left_of_page {
+  //@include box-sizing(border-box);
+  float: left;
+  max-width: 550px;
+  color: $ifyellow;
+  border: {
+    right: 1px solid;
+  }
+}
 
 #title_bar_content {
+  //font size comes from textFill jQuery function
+  //@include box-sizing(border-box);
   float:left;
-  max-width: 650px;
-  min-width: 440px;
+  width: 100%;
+  //max-width: 650px;
+  margin-top: 41px;
   text-align: center;
-  @include large-text(2.50em);
   letter-spacing: 0.014em;
   line-height: 1.4em;
+  
+  
+}
+
+#book_body_content {
+  @include def_body_content;
+  @include box-sizing(border-box);
+  clear: left;
+  padding: 21px 35px 0 35px;
+  width: 100%;
   color: $ifyellow;
+  
 }

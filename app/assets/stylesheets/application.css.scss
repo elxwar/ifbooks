@@ -11,6 +11,7 @@
  *= require_self
  *= require_tree .
 */
+
 @import "./partials/mixins";
 
 body {
@@ -60,29 +61,8 @@ body {
 }
 
 #body_content, #side_body_content {
-  float: left;
-  width: 47%;
-  background: white;
-  //color: #333;
-  padding: 20px 20px 20px 67px;
-  @include def-body-text;
-  ul {padding-left: 18px;}
-  li {
-    list-style: none;
-    margin-bottom: 5px;
-    &:before {
-      content: '\2022';
-      display: block;
-      position: relative;
-      max-width: 0px;
-      max-height: 0px;
-      left: -17px;
-      top: -0px;
-      color: $iforange;
-      font-size: 35px;
-    }
-    
-  }
+  @include def_body_content;
+  
   #books {
     padding-left: 0px;
     li {
@@ -149,4 +129,25 @@ footer {
 .ifso-bigger-bolder {
   @include large-text;
   font-weight: bold;
+}
+
+.books4schools-white-text {
+  color: #fff;
+}
+
+.books4schools-intro-para {
+  font-size: 1.125em;
+}
+
+.books4schools-author-image-plus-text {
+  margin: 28px 160px 63px -1px;
+  color: #fff;
+  font-size: 0.857em;
+  letter-spacing: 0px;
+  img {
+    margin-right: 9px;
+    float:left;
+    border: 1px solid;
+    border-color: rgba(140,151,146,0.7);    
+  }
 }

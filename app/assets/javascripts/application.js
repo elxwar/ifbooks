@@ -13,3 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(document).ready(function() {
+  return $("#title_bar_content").textfill();
+});
+$("#title_bar_content").textfill();

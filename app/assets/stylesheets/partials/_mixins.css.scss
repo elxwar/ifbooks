@@ -1,7 +1,8 @@
 $iforange: #f68d1f;
 $ifgreen: #87c440;
 $ifblack: #231f20;
-$ifdarkgreen: #14783a;
+$ifbggreen: #007839;
+$ifdarkgreen: #487638;
 $ifblue: #00aeef;
 $pale_green: #e4f1d4;
 $pale_blue: #c7eafc;
@@ -64,3 +65,27 @@ $sanserif: Arial,FreeSans,Helvetica,sans-serif;
     box-sizing: $n;
 }
 
+@mixin def_body_content {
+  float: left;
+  width: 47%;
+/*  background: white;*/
+  //color: #333;
+  padding: 20px 20px 20px 67px;
+  @include def-body-text;
+  ul {padding-left: 18px;}
+  li {
+    list-style: none;
+    margin-bottom: 5px;
+    &:before {
+      content: '\2022';
+      display: block;
+      position: relative;
+      max-width: 0px;
+      max-height: 0px;
+      left: -17px;
+      top: -0px;
+      color: $iforange;
+      font-size: 35px;
+    }
+  }
+}
