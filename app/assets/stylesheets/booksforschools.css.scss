@@ -52,3 +52,46 @@ Purpose of the stylesheet follows.
   color: $ifyellow;
   
 }
+
+.right_of_page{
+  float: left;
+  
+}
+.vid_frame{
+  
+  margin-top: 22px;
+  margin-left: 9px;
+  iframe {
+    @include box-sizing(border-box);
+    @include border-radius-all(10px);
+    border: solid;
+  }
+}
+
+#book_register{
+  margin-top: 45px;
+  margin-left: 55px;
+  clear:left;
+  color: #fff;
+  .book_buttons{
+    float:left;
+  }
+  .button {
+    @include border-radius-all(35px);
+    @include box-sizing(border-box);
+    float:left;
+    margin: 0;
+    padding: 1px 9px 1px 9px;
+    width: 135px;
+    background-color: $iforange;
+    border: 1px solid #fff;
+    font-size: 100%;
+    text-align: center;
+    line-height: 1.384615385em;
+    vertical-align: baseline;
+    text-decoration: none;
+    color: white;
+    &:first-child {margin-bottom: 7px;}
+    &:last-child {clear: left;}
+  }
+}

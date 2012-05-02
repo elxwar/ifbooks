@@ -32,10 +32,10 @@ Refinery::Core.configure do |config|
   # config.dragonfly_secret = "14f10f3cb88bac651d8bf987d62d512199017c1929cbca0d"
 
   # Show/hide IE6 upgrade message in the backend
-  # config.ie6_upgrade_message_enabled = true
+  config.ie6_upgrade_message_enabled = true
 
   # Show/hide browser update message in the backend
-  # config.show_internet_explorer_upgrade_message = false
+  config.show_internet_explorer_upgrade_message = false
 
   # Add extra tags to the wymeditor whitelist e.g. = {'tag' => {'attributes' => {'1' => 'href'}}} or just {'tag' => {}}
   # config.wymeditor_whitelist_tags = {}

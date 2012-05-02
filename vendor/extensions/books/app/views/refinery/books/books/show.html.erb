@@ -12,6 +12,18 @@
       <%=raw @book.description_for_schools %>
     </section>
   </div>
+  <div class="right_of_page">
+    <div class =" vid_frame">
+      <%= raw @book.video_url %>
+    </div>
+
+    <div id="book_register">
+      To register for <%=raw @book.title %><br /><br />
+      <div class="book_buttons">
+        <a href="#" class="button">CLICK HERE</a>     
+      </div>
+    </div>
+  </div>
   
   <%#******************COMMENTED OUT*****************%>
   <% if false %>

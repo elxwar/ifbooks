@@ -15,6 +15,6 @@
 //= require_tree .
 
 $(document).ready(function() {
-  return $("#title_bar_content").textfill();
+  return $("#title_bar_content").textfill(72);
 });
 $("#title_bar_content").textfill();

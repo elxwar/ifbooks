@@ -8,6 +8,7 @@
       maxWidth = parent.width()
       fontSize = parseInt(ourText.css("fontSize"), 10)
       multiplier = maxWidth / ourText.width()
-      newSize = (fontSize * (multiplier - 0.1))
-      ourText.css "fontSize", (if (maxFontSize > 0 and newSize > maxFontSize) then maxFontSize else newSize)
+      newSize = (fontSize * (multiplier - 0.2))
+      ourText.css "fontSize", (if (maxFontSize > 0 and newSize > maxFontSize) then maxFontSize else newSize) + 'px'
+      #ourText.css "lineHeight", (if (maxFontSize > 0 and newSize > maxFontSize) then maxFontSize else newSize)*1.1 + 'px'
 ) jQuery
