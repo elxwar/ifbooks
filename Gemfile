@@ -67,3 +67,4 @@ gem 'pg'
 gem 'will_paginate'
 
 gem 'refinerycms-books', :path => 'vendor/extensions'
+gem 'refinerycms-ifgroups', :path => 'vendor/extensions'

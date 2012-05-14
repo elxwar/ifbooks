@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120502115827) do
+ActiveRecord::Schema.define(:version => 20120514164511) do
 
   create_table "refinery_books", :force => true do |t|
     t.string   "title"
@@ -26,6 +26,26 @@ ActiveRecord::Schema.define(:version => 20120502115827) do
     t.text     "description_for_schools"
     t.text     "description_for_groups"
     t.string   "video_url"
+  end
+
+  create_table "refinery_ifgroups", :force => true do |t|
+    t.string   "title"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "school_name"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "address3"
+    t.string   "town"
+    t.string   "county"
+    t.string   "post_code"
+    t.string   "teacher_email"
+    t.string   "group1_email"
+    t.string   "group2_email"
+    t.string   "invoice_to"
+    t.integer  "position"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "refinery_images", :force => true do |t|

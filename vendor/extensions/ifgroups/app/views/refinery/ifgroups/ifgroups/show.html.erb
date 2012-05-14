@@ -1,0 +1,105 @@
+<% content_for :body_content_title do %>
+  <%= @ifgroup.title %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @ifgroup.title %>
+    </p>
+  </section>
+  <section>
+    <h1>First Name</h1>
+    <p>
+      <%=raw @ifgroup.first_name %>
+    </p>
+  </section>
+  <section>
+    <h1>Last Name</h1>
+    <p>
+      <%=raw @ifgroup.last_name %>
+    </p>
+  </section>
+  <section>
+    <h1>School Name</h1>
+    <p>
+      <%=raw @ifgroup.school_name %>
+    </p>
+  </section>
+  <section>
+    <h1>Address1</h1>
+    <p>
+      <%=raw @ifgroup.address1 %>
+    </p>
+  </section>
+  <section>
+    <h1>Address2</h1>
+    <p>
+      <%=raw @ifgroup.address2 %>
+    </p>
+  </section>
+  <section>
+    <h1>Address3</h1>
+    <p>
+      <%=raw @ifgroup.address3 %>
+    </p>
+  </section>
+  <section>
+    <h1>Town</h1>
+    <p>
+      <%=raw @ifgroup.town %>
+    </p>
+  </section>
+  <section>
+    <h1>County</h1>
+    <p>
+      <%=raw @ifgroup.county %>
+    </p>
+  </section>
+  <section>
+    <h1>Post Code</h1>
+    <p>
+      <%=raw @ifgroup.post_code %>
+    </p>
+  </section>
+  <section>
+    <h1>Teacher Email</h1>
+    <p>
+      <%=raw @ifgroup.teacher_email %>
+    </p>
+  </section>
+  <section>
+    <h1>Group1 Email</h1>
+    <p>
+      <%=raw @ifgroup.group1_email %>
+    </p>
+  </section>
+  <section>
+    <h1>Group2 Email</h1>
+    <p>
+      <%=raw @ifgroup.group2_email %>
+    </p>
+  </section>
+  <section>
+    <h1>Invoice To</h1>
+    <p>
+      <%=raw @ifgroup.invoice_to %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :body_content_right do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="ifgroups">
+      <% @ifgroups.each do |ifgroup| %>
+        <li>
+          <%= link_to ifgroup.title, refinery.ifgroups_ifgroup_path(ifgroup) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

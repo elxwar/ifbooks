@@ -1,0 +1,41 @@
+es:
+  refinery:
+    plugins:
+      ifgroups:
+        title: Ifgroups
+#        article: masculino/femenino
+    ifgroups:
+      admin:
+        ifgroups:
+          actions:
+            create_new: Crear nuevo ifgroup
+            reorder: Reordenar ifgroups
+            reorder_done: Reordenación de ifgroups completada
+          records:
+            title: Ifgroups
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay ifgroups todavía. Pulsa en "Crear nuevo Ifgroup" para crear tu primer ifgroup.
+          ifgroup:
+            view_live_html: Ver este ifgroup como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este ifgroup
+            delete: Borrar este ifgroup para siempre
+      ifgroups:
+        show:
+          other: Otros ifgroups
+  activerecord:
+    attributes:
+      'refinery/ifgroups/ifgroup':
+        title: Title
+        first_name: First Name
+        last_name: Last Name
+        school_name: School Name
+        address1: Address1
+        address2: Address2
+        address3: Address3
+        town: Town
+        county: County
+        post_code: Post Code
+        teacher_email: Teacher Email
+        group1_email: Group1 Email
+        group2_email: Group2 Email
+        invoice_to: Invoice To

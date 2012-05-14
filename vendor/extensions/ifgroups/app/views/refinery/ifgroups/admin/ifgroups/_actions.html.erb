@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Ifgroups::Admin::IfgroupsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.ifgroups_admin_ifgroups_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_ifgroups_admin_ifgroup_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Ifgroups::Admin::IfgroupsController.sortable? && ::Refinery::Ifgroups::Ifgroup.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Ifgroups"),
+                 refinery.ifgroups_admin_ifgroups_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Ifgroups"),
+                 refinery.ifgroups_admin_ifgroups_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

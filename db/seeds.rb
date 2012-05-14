@@ -11,3 +11,6 @@ Refinery::Pages::Engine.load_seed
 
 # Added by Refinery CMS Books extension
 Refinery::Books::Engine.load_seed
+
+# Added by Refinery CMS Ifgroups extension
+Refinery::Ifgroups::Engine.load_seed

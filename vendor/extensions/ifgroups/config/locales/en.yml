@@ -1,0 +1,40 @@
+en:
+  refinery:
+    plugins:
+      ifgroups:
+        title: Ifgroups
+    ifgroups:
+      admin:
+        ifgroups:
+          actions:
+            create_new: Add New Ifgroup
+            reorder: Reorder Ifgroups
+            reorder_done: Done Reordering Ifgroups
+          records:
+            title: Ifgroups
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Ifgroups yet. Click "Add New Ifgroup" to add your first ifgroup.
+          ifgroup:
+            view_live_html: View this ifgroup live <br/><em>(opens in a new window)</em>
+            edit: Edit this ifgroup
+            delete: Remove this ifgroup forever
+      ifgroups:
+        show:
+          other: Other Ifgroups
+  activerecord:
+    attributes:
+      'refinery/ifgroups/ifgroup':
+        title: Title
+        first_name: First Name
+        last_name: Last Name
+        school_name: School Name
+        address1: Address1
+        address2: Address2
+        address3: Address3
+        town: Town
+        county: County
+        post_code: Post Code
+        teacher_email: Teacher Email
+        group1_email: Group1 Email
+        group2_email: Group2 Email
+        invoice_to: Invoice To

@@ -1,0 +1,40 @@
+nb:
+  refinery:
+    plugins:
+      ifgroups:
+        title: Ifgroups
+    ifgroups:
+      admin:
+        ifgroups:
+          actions:
+            create_new: Lag en ny Ifgroup
+            reorder: Endre rekkefølgen på Ifgroups
+            reorder_done: Ferdig å endre rekkefølgen Ifgroups
+          records:
+            title: Ifgroups
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Ifgroups enda. Klikk på "Lag en ny Ifgroup" for å legge til din første ifgroup.
+          ifgroup:
+            view_live_html: Vis hvordan denne ifgroup ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne ifgroup
+            delete: Fjern denne ifgroup permanent
+      ifgroups:
+        show:
+          other: Andre Ifgroups
+  activerecord:
+    attributes:
+      'refinery/ifgroups/ifgroup':
+        title: Title
+        first_name: First Name
+        last_name: Last Name
+        school_name: School Name
+        address1: Address1
+        address2: Address2
+        address3: Address3
+        town: Town
+        county: County
+        post_code: Post Code
+        teacher_email: Teacher Email
+        group1_email: Group1 Email
+        group2_email: Group2 Email
+        invoice_to: Invoice To

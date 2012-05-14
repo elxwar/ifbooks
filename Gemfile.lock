@@ -3,6 +3,8 @@ PATH
   specs:
     refinerycms-books (1.0)
       refinerycms-core (~> 2.0.3)
+    refinerycms-ifgroups (1.0)
+      refinerycms-core (~> 2.0.3)
 
 GEM
   remote: https://rubygems.org/
@@ -231,6 +233,7 @@ DEPENDENCIES
   refinerycms (~> 2.0.0)
   refinerycms-books!
   refinerycms-i18n (~> 2.0.0)
+  refinerycms-ifgroups!
   refinerycms-wymeditor (~> 0.0.1)
   sass-rails (~> 3.2.3)
   therubyracer

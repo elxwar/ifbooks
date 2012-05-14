@@ -1,0 +1,95 @@
+<%= form_for [refinery, :ifgroups_admin, @ifgroup] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @ifgroup,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest'  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :first_name -%>
+    <%= f.text_field :first_name  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :last_name -%>
+    <%= f.text_field :last_name  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :school_name -%>
+    <%= f.text_field :school_name  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :address1 -%>
+    <%= f.text_field :address1  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :address2 -%>
+    <%= f.text_field :address2  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :address3 -%>
+    <%= f.text_field :address3  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :town -%>
+    <%= f.text_field :town  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :county -%>
+    <%= f.text_field :county  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :post_code -%>
+    <%= f.text_field :post_code  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :teacher_email -%>
+    <%= f.text_field :teacher_email  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :group1_email -%>
+    <%= f.text_field :group1_email  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :group2_email -%>
+    <%= f.text_field :group2_email  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :invoice_to -%>
+    <%= f.text_field :invoice_to  -%>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.ifgroups.admin.ifgroups.ifgroup'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @ifgroup.title) %>
+<% end -%>

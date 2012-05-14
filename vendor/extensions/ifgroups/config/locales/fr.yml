@@ -1,0 +1,40 @@
+fr:
+  refinery:
+    plugins:
+      ifgroups:
+        title: Ifgroups
+    ifgroups:
+      admin:
+        ifgroups:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Ifgroup
+            reorder: Réordonner les Ifgroups
+            reorder_done: Fin de réordonnancement des Ifgroups
+          records:
+            title: Ifgroups
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Ifgroup. Cliquer sur "Créer un(e) nouve(au/l/lle) Ifgroup" pour créer votre premi(er/ère) ifgroup.'
+          ifgroup:
+            view_live_html: Voir ce(t/tte) ifgroup <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) ifgroup
+            delete: Supprimer définitivement ce(t/tte) ifgroup
+      ifgroups:
+        show:
+          other: Autres Ifgroups
+  activerecord:
+    attributes:
+      'refinery/ifgroups/ifgroup':
+        title: Title
+        first_name: First Name
+        last_name: Last Name
+        school_name: School Name
+        address1: Address1
+        address2: Address2
+        address3: Address3
+        town: Town
+        county: County
+        post_code: Post Code
+        teacher_email: Teacher Email
+        group1_email: Group1 Email
+        group2_email: Group2 Email
+        invoice_to: Invoice To
