@@ -1,0 +1,49 @@
+<h1>Listing ifgroups</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>School name</th>
+    <th>Address1</th>
+    <th>Address2</th>
+    <th>Address3</th>
+    <th>Town</th>
+    <th>County</th>
+    <th>Post code</th>
+    <th>Teacher email</th>
+    <th>Group1 email</th>
+    <th>Group2 email</th>
+    <th>Invoice to</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ifgroups.each do |ifgroup| %>
+  <tr>
+    <td><%= ifgroup.title %></td>
+    <td><%= ifgroup.first_name %></td>
+    <td><%= ifgroup.last_name %></td>
+    <td><%= ifgroup.school_name %></td>
+    <td><%= ifgroup.address1 %></td>
+    <td><%= ifgroup.address2 %></td>
+    <td><%= ifgroup.address3 %></td>
+    <td><%= ifgroup.town %></td>
+    <td><%= ifgroup.county %></td>
+    <td><%= ifgroup.post_code %></td>
+    <td><%= ifgroup.teacher_email %></td>
+    <td><%= ifgroup.group1_email %></td>
+    <td><%= ifgroup.group2_email %></td>
+    <td><%= ifgroup.invoice_to %></td>
+    <td><%= link_to 'Show', ifgroup %></td>
+    <td><%= link_to 'Edit', edit_ifgroup_path(ifgroup) %></td>
+    <td><%= link_to 'Destroy', ifgroup, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ifgroup', new_ifgroup_path %>
