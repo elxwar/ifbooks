@@ -20,7 +20,11 @@
     <div id="book_register">
       To register for <%=raw @book.title %><br /><br />
       <div class="book_buttons">
-        <a href="#" class="button">CLICK HERE</a>     
+        <a href="#" class="button">CLICK HERE</a>
+        <%= link_to "CLICK HERE", main_app.new_ifgroup_path, :locals => @book, :class=>"button" %>
+
+        <%#= button_to "test",  :action => 'index' %>
+        <%=  @book.title %>
       </div>
     </div>
   </div>

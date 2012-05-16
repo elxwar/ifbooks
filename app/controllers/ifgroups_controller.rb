@@ -1,6 +1,7 @@
 class IfgroupsController < ApplicationController
 
   #before_filter :find_all_ifgroups
+  before_filter :find_all_books
   before_filter :find_page
 
   # GET /ifgroups
@@ -30,6 +31,7 @@ class IfgroupsController < ApplicationController
   # GET /ifgroups/new.json
   def new
     @ifgroup = Ifgroup.new
+    @book = @books.first
 
     respond_to do |format|
       format.html # new.html.erb
@@ -88,6 +90,10 @@ class IfgroupsController < ApplicationController
   end
 
   protected
+
+  def find_all_books
+    @books = ::Refinery::Books::Book.order('position ASC')
+  end
 
   def find_all_ifgroups
     @ifgroups = Ifgroup.order('position ASC')
