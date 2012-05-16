@@ -1,6 +1,6 @@
 <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(ifgroup) -%>">
   <span class='title'>
-    <%= ifgroup.title %>
+    <%= ifgroup.school_name %>
 
   </span>
   <span class='actions'>
@@ -14,7 +14,7 @@
     <%= link_to refinery_icon_tag("delete.png"), refinery.ifgroups_admin_ifgroup_path(ifgroup),
         :class => "cancel confirm-delete",
         :title => t('.delete'),
-        :confirm => t('message', :scope => 'refinery.admin.delete', :title => ifgroup.title),
+        :confirm => t('message', :scope => 'refinery.admin.delete', :title => ifgroup.school_name),
         :method => :delete %>
   </span>
 </li>

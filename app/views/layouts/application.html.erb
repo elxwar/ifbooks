@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<% if @page[:title][0,6]=="School" or @page[:title][0,5]=="Books" or @page[:title][0,2]=="If"%>
+<% if @page[:title][0,6]=="School" or @page[:title][0,5]=="Books" or @page[:title][0,2]=="if"%>
   <% @logo = 'logoforschools' %>
   <% @containerclass = 'schools' %>
 <% else %>
@@ -7,7 +7,7 @@
   <% @containerclass = '' %>
 <% end %>
 
-             HELLO
+
 <%= render '/refinery/html_tag' %>
   <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <%= render '/refinery/head' %>

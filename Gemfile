@@ -12,6 +12,10 @@ group :development, :test do
   gem 'pg'
 end
 
+group :development do
+  gem 'rails-footnotes', '>= 3.7.5.rc4'
+end
+
 group :production do
   gem 'therubyracer'
 end

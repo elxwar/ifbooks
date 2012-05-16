@@ -3,10 +3,16 @@
               :object => @ifgroup,
               :include_object_name => true %>
 
-  
+
+    <div class='field'>
+      <%= f.label :school_name, :class => 'larger widest' -%>
+      <%= f.text_field :school_name  -%>
+
+    </div>
+
   <div class='field'>
     <%= f.label :title -%>
-    <%= f.text_field :title, :class => 'larger widest'  -%>
+    <%= f.text_field :title -%>
 
   </div>
   
@@ -21,12 +27,7 @@
     <%= f.text_field :last_name  -%>
 
   </div>
-  
-  <div class='field'>
-    <%= f.label :school_name -%>
-    <%= f.text_field :school_name  -%>
 
-  </div>
   
   <div class='field'>
     <%= f.label :address1 -%>
@@ -91,5 +92,5 @@
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,
              :delete_title => t('delete', :scope => 'refinery.ifgroups.admin.ifgroups.ifgroup'),
-             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @ifgroup.title) %>
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @ifgroup.school_name) %>
 <% end -%>
