@@ -39,6 +39,12 @@ class IfgroupsController < ApplicationController
     end
   end
 
+  def register
+
+    @book = @books.find(params[:id])
+    new
+  end
+
   # GET /ifgroups/1/edit
   def edit
     @ifgroup = Ifgroup.find(params[:id])

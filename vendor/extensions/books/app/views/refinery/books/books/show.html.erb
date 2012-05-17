@@ -22,6 +22,7 @@
       <div class="book_buttons">
         <a href="#" class="button">CLICK HERE</a>
         <%= link_to "CLICK HERE", main_app.new_ifgroup_path, :locals => @book, :class=>"button" %>
+        <%= link_to "CLICK HERE", main_app.register_path(:id => @book.id), :class=>"button" %>
 
         <%#= button_to "test",  :action => 'index' %>
         <%=  @book.title %>
