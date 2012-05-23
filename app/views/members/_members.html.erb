@@ -1,0 +1,23 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>ifgroup id</th>
+    <th>book id</th>
+  </tr>
+<% @members.each do |member| %>
+  <tr>
+    <td><%= member.name %></td>
+    <td><%= member.email %></td>
+    <td><%= member.ifgroup_id %></td>
+    <td><%= member.book_id %></td>
+    <td><%= link_to 'Edit', edit_member_path(member) %></td>
+    <td><%= link_to 'Destroy', member, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+
+
+
+<% end %>
+</table>
+
+<%= link_to 'New Member', new_member_path %>

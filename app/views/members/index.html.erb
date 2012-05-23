@@ -1,0 +1,20 @@
+<% content_for :body_content_left do %>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>ifgroup id</th>
+      <th>book id</th>
+    </tr>
+  </table>
+  <ul id="members">
+    <% @members.each do |member| %>
+      <li>
+        <%= link_to member.name, refinery.members_member_path(member) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

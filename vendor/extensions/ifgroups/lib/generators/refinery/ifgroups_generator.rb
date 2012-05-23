@@ -10,8 +10,8 @@ module Refinery
       append_file 'db/seeds.rb', :verbose => true do
         <<-EOH
 
-# Added by Refinery CMS Ifgroups extension
-Refinery::Ifgroups::Engine.load_seed
+# Added by Refinery CMS Members extension
+Refinery::Members::Engine.load_seed
         EOH
       end
     end

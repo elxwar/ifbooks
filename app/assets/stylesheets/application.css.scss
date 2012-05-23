@@ -116,8 +116,19 @@ footer {
   line-height: 1.4em;
 }
 
+.ifso-top-bar-title {
+  @include large-text(3.50em);
+  letter-spacing: 0.014em;
+  margin: 0;
+}
+
 .ifso-bold-orange {
   color: $iforange;
+  font-weight: bold;
+}
+
+.ifso-pale-orange {
+  color: $ifpaleorange;
   font-weight: bold;
 }
 

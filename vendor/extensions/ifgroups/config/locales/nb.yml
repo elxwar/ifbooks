@@ -1,8 +1,30 @@
 nb:
   refinery:
     plugins:
+      members:
+        title: Members
       ifgroups:
         title: Ifgroups
+    members:
+      admin:
+        members:
+          actions:
+            create_new: Lag en ny Member
+            reorder: Endre rekkefølgen på Members
+            reorder_done: Ferdig å endre rekkefølgen Members
+          records:
+            title: Members
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Members enda. Klikk på "Lag en ny Member" for
+              å legge til din første member.
+          member:
+            view_live_html: Vis hvordan denne member ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne member
+            delete: Fjern denne member permanent
+      members:
+        show:
+          other: Andre Members
     ifgroups:
       admin:
         ifgroups:
@@ -13,9 +35,11 @@ nb:
           records:
             title: Ifgroups
             sorry_no_results: Beklager! Vi fant ikke noen resultater.
-            no_items_yet: Det er ingen Ifgroups enda. Klikk på "Lag en ny Ifgroup" for å legge til din første ifgroup.
+            no_items_yet: Det er ingen Ifgroups enda. Klikk på "Lag en ny Ifgroup"
+              for å legge til din første ifgroup.
           ifgroup:
-            view_live_html: Vis hvordan denne ifgroup ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            view_live_html: Vis hvordan denne ifgroup ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
             edit: Rediger denne ifgroup
             delete: Fjern denne ifgroup permanent
       ifgroups:
@@ -23,7 +47,10 @@ nb:
           other: Andre Ifgroups
   activerecord:
     attributes:
-      'refinery/ifgroups/ifgroup':
+      refinery/members/member:
+        name: Name
+        email: Email
+      refinery/ifgroups/ifgroup:
         title: Title
         first_name: First Name
         last_name: Last Name

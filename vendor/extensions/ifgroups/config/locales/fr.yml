@@ -1,8 +1,29 @@
 fr:
   refinery:
     plugins:
+      members:
+        title: Members
       ifgroups:
         title: Ifgroups
+    members:
+      admin:
+        members:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Member
+            reorder: Réordonner les Members
+            reorder_done: Fin de réordonnancement des Members
+          records:
+            title: Members
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Member. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Member" pour créer votre premi(er/ère) member.
+          member:
+            view_live_html: Voir ce(t/tte) member <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) member
+            delete: Supprimer définitivement ce(t/tte) member
+      members:
+        show:
+          other: Autres Members
     ifgroups:
       admin:
         ifgroups:
@@ -12,8 +33,9 @@ fr:
             reorder_done: Fin de réordonnancement des Ifgroups
           records:
             title: Ifgroups
-            sorry_no_results: "Désolé ! Aucun résultat."
-            no_items_yet: 'Il n''y a actuellement aucun(e) Ifgroup. Cliquer sur "Créer un(e) nouve(au/l/lle) Ifgroup" pour créer votre premi(er/ère) ifgroup.'
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Ifgroup. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Ifgroup" pour créer votre premi(er/ère) ifgroup.
           ifgroup:
             view_live_html: Voir ce(t/tte) ifgroup <br/><em>(Ouvre une nouvelle fenêtre)</em>
             edit: Modifier ce(t/tte) ifgroup
@@ -23,7 +45,10 @@ fr:
           other: Autres Ifgroups
   activerecord:
     attributes:
-      'refinery/ifgroups/ifgroup':
+      refinery/members/member:
+        name: Name
+        email: Email
+      refinery/ifgroups/ifgroup:
         title: Title
         first_name: First Name
         last_name: Last Name

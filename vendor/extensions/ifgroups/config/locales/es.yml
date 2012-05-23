@@ -1,9 +1,30 @@
 es:
   refinery:
     plugins:
+      members:
+        title: Members
       ifgroups:
         title: Ifgroups
-#        article: masculino/femenino
+    members:
+      admin:
+        members:
+          actions:
+            create_new: Crear nuevo member
+            reorder: Reordenar members
+            reorder_done: Reordenación de members completada
+          records:
+            title: Members
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay members todavía. Pulsa en "Crear nuevo Member" para
+              crear tu primer member.
+          member:
+            view_live_html: Ver este member como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este member
+            delete: Borrar este member para siempre
+      members:
+        show:
+          other: Otros members
     ifgroups:
       admin:
         ifgroups:
@@ -14,9 +35,11 @@ es:
           records:
             title: Ifgroups
             sorry_no_results: Lo siento, no hay resultados
-            no_items_yet: No hay ifgroups todavía. Pulsa en "Crear nuevo Ifgroup" para crear tu primer ifgroup.
+            no_items_yet: No hay ifgroups todavía. Pulsa en "Crear nuevo Ifgroup"
+              para crear tu primer ifgroup.
           ifgroup:
-            view_live_html: Ver este ifgroup como abierto al público <br/><em>(abre en ventana nueva)</em>
+            view_live_html: Ver este ifgroup como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
             edit: Editar este ifgroup
             delete: Borrar este ifgroup para siempre
       ifgroups:
@@ -24,7 +47,10 @@ es:
           other: Otros ifgroups
   activerecord:
     attributes:
-      'refinery/ifgroups/ifgroup':
+      refinery/members/member:
+        name: Name
+        email: Email
+      refinery/ifgroups/ifgroup:
         title: Title
         first_name: First Name
         last_name: Last Name

@@ -14,3 +14,6 @@ Refinery::Books::Engine.load_seed
 
 # Added by Refinery CMS Ifgroups extension
 Refinery::Ifgroups::Engine.load_seed
+
+# Added by Refinery CMS Members extension
+Refinery::Members::Engine.load_seed
