@@ -16,5 +16,7 @@
 
 $(document).ready(function() {
   return $("#title_bar_content").textfill(72);
+//  return $(".ifsobooks").html("so");
 });
 $("#title_bar_content").textfill();
+$(".ifso-books").html("<span class='ifso-pale-orange'>if</span>so<span class='ifso-bold-green'>books</span>");
