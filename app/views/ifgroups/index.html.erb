@@ -1,7 +1,11 @@
 <h1>Listing ifgroups</h1>
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
 
 <table>
   <tr>
+    <th>Ifgroup Name</th>
     <th>Title</th>
     <th>First name</th>
     <th>Last name</th>
@@ -23,6 +27,7 @@
 
 <% @ifgroups.each do |ifgroup| %>
   <tr>
+    <td><%=	 ifgroup.group_name %></td>
     <td><%= ifgroup.title %></td>
     <td><%= ifgroup.first_name %></td>
     <td><%= ifgroup.last_name %></td>
