@@ -5,6 +5,6 @@ class Ifgroup < ActiveRecord::Base
 
   validates :group_name, :presence => true, :uniqueness => true
   validates :school_name, :presence => true
-  #validates :book_id, :presence => true
+  validates :book_id, :presence => true
   has_secure_password
 end
