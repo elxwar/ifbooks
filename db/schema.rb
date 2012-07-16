@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120625100733) do
+ActiveRecord::Schema.define(:version => 20120716114005) do
 
   create_table "perens_instant_user_users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(:version => 20120625100733) do
     t.datetime "updated_at",      :null => false
     t.string   "group_name"
     t.string   "password_digest"
+    t.integer  "book_id"
   end
 
   create_table "refinery_images", :force => true do |t|

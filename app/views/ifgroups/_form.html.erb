@@ -10,8 +10,9 @@
       </ul>
     </div>
   <% end %>
-
+  <p id="notice"><%= notice %></p>
   <fieldset>
+    <legend>Enter Group details:</legend>
     <div>
       <%= f.label :group_name %><br />
       <%= f.text_field :group_name, size: 30 %>
@@ -80,8 +81,12 @@
       <%= f.label :invoice_to %><br />
       <%= f.text_field :invoice_to %>
     </div>
+    <div class="field">
+      <%= f.hidden_field :book_id, :value => @book.id %>
+    </div>
     <div class="actions">
       <%= f.submit %>
     </div>
+
   </fieldset>
 <% end %>

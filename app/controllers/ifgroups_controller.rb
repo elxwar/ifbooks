@@ -7,7 +7,8 @@ class IfgroupsController < ApplicationController
   # GET /ifgroups
   # GET /ifgroups.json
   def index
-    @ifgroups = Ifgroup.all
+    #@ifgroups = Ifgroup.all
+    @ifgroups = Ifgroup.order(:group_name)
 
     respond_to do |format|
 
@@ -31,7 +32,7 @@ class IfgroupsController < ApplicationController
   # GET /ifgroups/new.json
   def new
     @ifgroup = Ifgroup.new
-    @book = @books.first
+    #@book = @books.first
 
     respond_to do |format|
       format.html # new.html.erb
@@ -55,13 +56,15 @@ class IfgroupsController < ApplicationController
   # POST /ifgroups.json
   def create
     @ifgroup = Ifgroup.new(params[:ifgroup])
+    #@book = @books.find(params[:id])
 
     respond_to do |format|
       if @ifgroup.save
         format.html { redirect_to @ifgroup, notice: 'Ifgroup, #{@ifgroup.group_name}, was successfully created.' }
         format.json { render json: @ifgroup, status: :created, location: @ifgroup }
       else
-        format.html { render action: "new" }
+        #format.html { render action: "register"}
+        format.html {redirect_to main_app.register_path(:id => @ifgroup.book_id), notice: 'ooops!'}
         format.json { render json: @ifgroup.errors, status: :unprocessable_entity }
       end
     end
