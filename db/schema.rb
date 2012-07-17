@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120716114005) do
+ActiveRecord::Schema.define(:version => 20120717163550) do
+
+  create_table "memberships", :force => true do |t|
+    t.integer  "ifgroup_id"
+    t.integer  "groupable_id"
+    t.string   "groupable_type"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
 
   create_table "perens_instant_user_users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
