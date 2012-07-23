@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="subscriptions">
+    <% @subscriptions.each do |subscription| %>
+      <li>
+        <%= link_to subscription, refinery.subscriptions_subscription_path(subscription) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

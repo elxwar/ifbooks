@@ -1,10 +1,32 @@
 nl:
   refinery:
     plugins:
+      subscriptions:
+        title: Subscriptions
       members:
         title: Members
       ifgroups:
         title: Ifgroups
+    subscriptions:
+      admin:
+        subscriptions:
+          actions:
+            create_new: Maak een nieuwe Subscription
+            reorder: Wijzig de volgorde van de Subscriptions
+            reorder_done: Klaar met het wijzingen van de volgorde van de Subscriptions
+          records:
+            title: Subscriptions
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Subscriptions. Druk op 'Maak een nieuwe
+              Subscription' om de eerste aan te maken.
+          subscription:
+            view_live_html: Bekijk deze subscription op de website <br/><em>(opent
+              een nieuw venster)</em>
+            edit: Bewerk deze subscription
+            delete: Verwijder deze subscription voor eeuwig
+      subscriptions:
+        show:
+          other: Andere Subscriptions
     members:
       admin:
         members:
@@ -47,6 +69,9 @@ nl:
           other: Andere Ifgroups
   activerecord:
     attributes:
+      refinery/subscriptions/subscription:
+        book_id: Book
+        ifgroup_id: Ifgroup
       refinery/members/member:
         name: Name
         email: Email

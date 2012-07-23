@@ -1,10 +1,31 @@
 en:
   refinery:
     plugins:
+      subscriptions:
+        title: Subscriptions
       members:
         title: Members
       ifgroups:
         title: Ifgroups
+    subscriptions:
+      admin:
+        subscriptions:
+          actions:
+            create_new: Add New Subscription
+            reorder: Reorder Subscriptions
+            reorder_done: Done Reordering Subscriptions
+          records:
+            title: Subscriptions
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Subscriptions yet. Click "Add New Subscription"
+              to add your first subscription.
+          subscription:
+            view_live_html: View this subscription live <br/><em>(opens in a new window)</em>
+            edit: Edit this subscription
+            delete: Remove this subscription forever
+      subscriptions:
+        show:
+          other: Other Subscriptions
     members:
       admin:
         members:
@@ -45,6 +66,9 @@ en:
           other: Other Ifgroups
   activerecord:
     attributes:
+      refinery/subscriptions/subscription:
+        book_id: Book
+        ifgroup_id: Ifgroup
       refinery/members/member:
         name: Name
         email: Email

@@ -1,10 +1,32 @@
 es:
   refinery:
     plugins:
+      subscriptions:
+        title: Subscriptions
       members:
         title: Members
       ifgroups:
         title: Ifgroups
+    subscriptions:
+      admin:
+        subscriptions:
+          actions:
+            create_new: Crear nuevo subscription
+            reorder: Reordenar subscriptions
+            reorder_done: Reordenación de subscriptions completada
+          records:
+            title: Subscriptions
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay subscriptions todavía. Pulsa en "Crear nuevo Subscription"
+              para crear tu primer subscription.
+          subscription:
+            view_live_html: Ver este subscription como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este subscription
+            delete: Borrar este subscription para siempre
+      subscriptions:
+        show:
+          other: Otros subscriptions
     members:
       admin:
         members:
@@ -47,6 +69,9 @@ es:
           other: Otros ifgroups
   activerecord:
     attributes:
+      refinery/subscriptions/subscription:
+        book_id: Book
+        ifgroup_id: Ifgroup
       refinery/members/member:
         name: Name
         email: Email

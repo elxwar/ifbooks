@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Subscriptions::Admin::SubscriptionsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.subscriptions_admin_subscriptions_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_subscriptions_admin_subscription_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Subscriptions::Admin::SubscriptionsController.sortable? && ::Refinery::Subscriptions::Subscription.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Subscriptions"),
+                 refinery.subscriptions_admin_subscriptions_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Subscriptions"),
+                 refinery.subscriptions_admin_subscriptions_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

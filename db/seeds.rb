@@ -17,3 +17,6 @@ Refinery::Ifgroups::Engine.load_seed
 
 # Added by Refinery CMS Members extension
 Refinery::Members::Engine.load_seed
+
+# Added by Refinery CMS Subscriptions extension
+Refinery::Subscriptions::Engine.load_seed

@@ -1,10 +1,32 @@
 nb:
   refinery:
     plugins:
+      subscriptions:
+        title: Subscriptions
       members:
         title: Members
       ifgroups:
         title: Ifgroups
+    subscriptions:
+      admin:
+        subscriptions:
+          actions:
+            create_new: Lag en ny Subscription
+            reorder: Endre rekkefølgen på Subscriptions
+            reorder_done: Ferdig å endre rekkefølgen Subscriptions
+          records:
+            title: Subscriptions
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Subscriptions enda. Klikk på "Lag en ny Subscription"
+              for å legge til din første subscription.
+          subscription:
+            view_live_html: Vis hvordan denne subscription ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne subscription
+            delete: Fjern denne subscription permanent
+      subscriptions:
+        show:
+          other: Andre Subscriptions
     members:
       admin:
         members:
@@ -47,6 +69,9 @@ nb:
           other: Andre Ifgroups
   activerecord:
     attributes:
+      refinery/subscriptions/subscription:
+        book_id: Book
+        ifgroup_id: Ifgroup
       refinery/members/member:
         name: Name
         email: Email

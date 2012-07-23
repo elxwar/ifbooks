@@ -1,0 +1,23 @@
+<%= form_for [refinery, :subscriptions_admin, @subscription] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @subscription,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :book_id -%>
+    <%= f.number_field :book_id  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :ifgroup_id -%>
+    <%= f.number_field :ifgroup_id  -%>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.subscriptions.admin.subscriptions.subscription'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete') %>
+<% end -%>
