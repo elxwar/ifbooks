@@ -20,6 +20,7 @@ class Book < ActiveRecord::Base
   self.table_name = 'refinery_books'
   has_many :subscriptions, :dependent => :destroy
   has_many :ifgroups, :through => :subscriptions
+  has_many :members, :through => :ifgroups
 
   #has_many :subscriptions, :class_name => '::Refinery::Subscriptions::Subscription'
   #has_many :ifgroups, :class_name => '::Refinery::Ifgroups::Ifgroup', :through => :subscriptions

@@ -21,6 +21,7 @@ class Ifgroup < ActiveRecord::Base
 
   has_many :subscriptions, :dependent => :destroy
   has_many :books, :through => :subscriptions
+  has_many :members
 
   #has_many :subscriptions, :class_name => '::Refinery::Subscriptions::Subscription'
   #has_many :books, :class_name => '::Refinery::Books::Book', :through => :subscriptions
