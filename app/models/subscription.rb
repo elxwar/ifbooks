@@ -1,7 +1,7 @@
-class Subscription < Refinery::Core::BaseModel
+class Subscription < ActiveRecord::Base
   self.table_name = 'refinery_subscriptions'
   belongs_to :book #, :class_name => '::Refinery::Books::Book'
-  belongs_to :ifgroup #, :class_name => '::Refinery::Ifgroups::Ifgroup'
+  belongs_to :ifgroup
 
 
 

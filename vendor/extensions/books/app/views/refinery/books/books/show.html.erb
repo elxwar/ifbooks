@@ -20,8 +20,8 @@
     <div id="book_register">
       To register for <em><%=raw @book.title %></em><br /><br />
       <div class="book_buttons">
+        <%#= link_to "CLICK HERE", main_app.register_path(:id => @book.id), :class=>"button" %>
         <%= link_to "CLICK HERE", main_app.register_path(:id => @book.id), :class=>"button" %>
-
 
       </div>
     </div>

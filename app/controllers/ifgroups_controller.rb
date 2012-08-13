@@ -42,7 +42,7 @@ class IfgroupsController < ApplicationController
 
   def register
     @members = ::Refinery::Members::Member.order('position ASC')
-    @book = @books.find(params[:id])
+    #@book = @books.find(params[:id])
     new
   end
 

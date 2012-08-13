@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require jquery_nested_form
 
 $(document).ready(function() {
   return $("#title_bar_content").textfill(72);

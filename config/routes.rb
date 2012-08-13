@@ -1,8 +1,12 @@
 Ifbooks::Application.routes.draw do
 
   resources :ifgroups
-  match "register" => 'ifgroups#register'
+
+  #match "register" => 'ifgroups#register'
+  match "register" => 'books#register'
   resources :members
+
+  #resources :subscriptions
 
   # This line mounts Refinery's routes at the root of your application.
   # This means, any requests to the root URL of your application will go to Refinery::PagesController#home.
@@ -11,6 +15,8 @@ Ifbooks::Application.routes.draw do
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
   mount Refinery::Core::Engine, :at => '/'
 
+
+  resources :books
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

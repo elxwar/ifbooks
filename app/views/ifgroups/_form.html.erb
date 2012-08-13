@@ -11,6 +11,12 @@
     </div>
   <% end %>
   <p id="notice"><%= notice %></p>
+  Hello!!!
+  <%= f.fields_for :books do |ff| %>
+    <p><%= ff.text_field :title %></p>
+    <p><%#= ff.link_to_add "Add a question", :subscriptions %></p>
+    <p><%#= ff.submit "Submit" %></p>
+  <% end %>
   <fieldset>
     <legend>Enter Group details:</legend>
     <div>
@@ -82,7 +88,7 @@
       <%= f.text_field :invoice_to %>
     </div>
     <div class="field">
-      <%= f.hidden_field :book_id, :value => @book.id %>
+      <%#= f.hidden_field :book_id, :value => @book.id %>
     </div>
     <div class="actions">
       <%= f.submit %>
