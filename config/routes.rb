@@ -3,7 +3,7 @@ Ifbooks::Application.routes.draw do
   resources :ifgroups
 
   #match "register" => 'ifgroups#register'
-  match "register" => 'books#register'
+  match "register" => 'ifgroups#register'
   resources :members
 
   #resources :subscriptions
