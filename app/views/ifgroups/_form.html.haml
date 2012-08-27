@@ -1,0 +1,124 @@
+= nested_form_for@ifgroup do |f|
+  - if @ifgroup.errors.any?
+    #error_explanation
+      .h2
+        = pluralize(@ifgroup.errors.count, "error")
+        prohibited this book from being saved:
+
+      %ul
+        = @ifgroup.errors.full_messages.each do |msg|
+          %li= msg
+
+
+  %p
+    #notice= notice
+    %fieldset
+      %legend Enter Group details
+      %table
+        %tr
+          %td= f.label :group_name, 'Group Name:'
+          %td=f.text_field :group_name, size: 30
+        %tr
+          %td= f.label :password, 'Password:'
+          %td= f.password_field :password, size: 30
+        %tr
+          %td= f.label :password_confirmation, "Confirm Password:"
+          %td= f.password_field :password_confirmation, size: 30
+        %tr
+          %td= f.label :title, "Title (Ms/Mr...):"
+          %td= f.text_field :title, size: 30
+        %tr
+          %td= f.label :first_name, "First Name:"
+          %td= f.text_field :first_name, size: 30
+        %tr
+          %td= f.label :last_name 
+          %td= f.text_field :last_name, size: 30
+        %tr
+          %td= f.label :school_name 
+          %td= f.text_field :school_name, size: 30
+        %tr
+          %td= f.label :address1 
+          %td= f.text_field :address1, size: 30
+        %tr
+          %td= f.label :address2 
+          %td= f.text_field :address2, size: 30
+        %tr
+          %td= f.label :address3 
+          %td= f.text_field :address3, size: 30
+        %tr
+          %td= f.label :town 
+          %td= f.text_field :town, size: 30
+        %tr
+          %td= f.label :county 
+          %td= f.text_field :county, size: 30
+        %tr
+          %td= f.label :post_code 
+          %td= f.text_field :post_code, size: 30
+        %tr
+          %td= f.label :teacher_email 
+          %td= f.text_field :teacher_email, size: 30
+        %tr
+          %td= f.label :group1_email 
+          %td= f.text_field :group1_email, size: 30
+        %tr
+          %td= f.label :group2_email 
+          %td= f.text_field :group2_email, size: 30
+        %tr
+          %td= f.label :invoice_to 
+          %td= f.text_field :invoice_to, size: 30
+
+      before subs
+      = f.hidden_field :book_id, :value => @book.id
+
+
+
+
+
+      = f.fields_for :members do |ffm|
+        member:
+        = ffm.text_field :email, size: 30
+        = ffm.link_to_remove "Remove this member?"
+      %p
+      %br
+      = f.link_to_add "Add a member", :members
+
+      %p= f.submit "Submit"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  -#.book_field
+  -#  = f.label :title
+  -#  %br
+  -#  = f.text_field :title, size: 30
+  -#
+  -#.book_field
+  -#  = f.label :author
+  -#  %br
+  -#  = f.text_field :author, size: 30
+  -#
+  -#= f.fields_for :ifgroups do |ff|
+  -#  Ifgroup:
+  -#  = ff.text_field :group_name, size: 30
+  -#
+  -#= f.fields_for :members do |ffb|
+  -#  member:
+  -#  = ffb.text_field :email, size: 30
+  -#  = ffb.link_to_remove "Remove this member?"
+  -#%p
+  -#  %br
+  -#  = f.link_to_add "Add a member", :members
+
+

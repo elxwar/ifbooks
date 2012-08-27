@@ -1,4 +1,4 @@
-<%= form_for(@ifgroup) do |f| %>
+<%= nested_form_for(@ifgroup) do |f| %>
   <% if @ifgroup.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@ifgroup.errors.count, "error") %> prohibited this ifgroup from being saved:</h2>
@@ -82,8 +82,9 @@
       <%= f.text_field :invoice_to %>
     </div>
     <div class="field">
-      <%#= f.hidden_field :book_id, :value => @book.id %>
+      <%= f.hidden_field :book_id, :value => @book.id %>
     </div>
+    <%= render 'members/members' %>
     <div class="actions">
       <%= f.submit %>
     </div>
