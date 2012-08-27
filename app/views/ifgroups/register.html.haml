@@ -1,0 +1,11 @@
+#title_content
+  %content#register_book_title
+    = @book.title
+%section#body_content
+  %content#registration_form_holder
+    .ifso-bigger-bolder Register here:
+    / <p><strong>this file is: /home/eric/webs/ifbooks/app/views/ifgroups/register.html.erb</strong></p>
+    = render 'form'
+    / <haml:loud> link_to 'Back', ifgroups_path </haml:loud>
+%content#side_body_content
+  = render 'refinery/pages/book_list'

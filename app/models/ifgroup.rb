@@ -3,8 +3,8 @@ class Ifgroup < ActiveRecord::Base
   self.table_name = 'refinery_ifgroups'
 
   #has_many :subscriptions, :dependent => :destroy
-  has_one :book
-  has_many :members
+  belongs_to :book, :class_name => '::Book'
+  has_many :members, :class_name => '::Member'
   accepts_nested_attributes_for :members
   #accepts_nested_attributes_for :books
 

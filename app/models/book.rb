@@ -2,8 +2,8 @@ class Book < ActiveRecord::Base
 
 
   self.table_name = 'refinery_books'
-  has_many :ifgroups
-  has_many :members, :through => :ifgroups
+  has_many :ifgroups, :class_name => '::Ifgroup'
+  #has_many :members, :through => :ifgroups
   #accepts_nested_attributes_for :ifgroups
   #accepts_nested_attributes_for :members
 

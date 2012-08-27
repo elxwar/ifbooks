@@ -21,7 +21,7 @@ class IfgroupsController < ApplicationController
   # GET /ifgroups/1.json
   def show
     @ifgroup = Ifgroup.find(params[:id])
-
+    @book = @ifgroup.book
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @ifgroup }

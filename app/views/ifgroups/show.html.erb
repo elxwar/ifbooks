@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<%= render 'form'%>
+<%= @ifgroup.book.title %>
 <p>
   <b>Title:</b>
   <%= @ifgroup.title %>
@@ -69,7 +70,9 @@
   <b>Invoice to:</b>
   <%= @ifgroup.invoice_to %>
 </p>
-
+<% @ifgroup.members.each do |m| %>
+  <%= m.email %>
+<% end %>
 
 <%= link_to 'Edit', edit_ifgroup_path(@ifgroup) %> |
 <%= link_to 'Back', ifgroups_path %>
