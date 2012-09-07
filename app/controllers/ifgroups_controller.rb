@@ -32,7 +32,7 @@ class IfgroupsController < ApplicationController
   # GET /ifgroups/new.json
   def new
     @ifgroup = Ifgroup.new
-    @book = @books.first
+    @book = @books.find(params[:id])
 
     respond_to do |format|
       format.html # new.html.erb
