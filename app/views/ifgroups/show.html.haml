@@ -1,0 +1,66 @@
+= @ifgroup.book.title
+%p
+  %b Title:
+  = @ifgroup.title
+%p
+  %b First name:
+  = @ifgroup.first_name
+%p
+  %b Last name:
+  = @ifgroup.last_name
+%p
+  %b School name:
+  = @ifgroup.school_name
+%p
+  %b Address1:
+  = @ifgroup.address1
+%p
+  %b Address2:
+  = @ifgroup.address2
+%p
+  %b Address3:
+  = @ifgroup.address3
+%p
+  %b Town:
+  = @ifgroup.town
+%p
+  %b County:
+  = @ifgroup.county
+%p
+  %b Post code:
+  = @ifgroup.post_code
+%p
+  %b Teacher email:
+  = @ifgroup.teacher_email
+%p
+  %b Group1 email:
+  = @ifgroup.group1_email
+%p
+  %b Group2 email:
+  = @ifgroup.group2_email
+%p
+  %b Invoice to:
+  = @ifgroup.invoice_to
+%table.members_table
+  %th
+  %th
+    Name
+  %th
+    Email
+  - @ifgroup.members.each_with_index do |m, index|
+    %tr
+      %td
+        %b
+          = (index +1).ordinalize
+          Member:
+      %td
+        -if m.name
+          = m.name
+        -else
+          'Name not supplied'
+      %td
+        = m.email
+
+= link_to 'Edit Group and Member Details', edit_ifgroup_path(@ifgroup)
+|
+= link_to 'Back', '/'

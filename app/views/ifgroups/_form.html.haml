@@ -11,7 +11,8 @@
 
 
   %p
-    #notice= notice
+    -if notice
+      #notice= notice
     %fieldset
       %legend Enter Group details
       %table
@@ -67,58 +68,26 @@
           %td= f.label :invoice_to 
           %td= f.text_field :invoice_to, size: 30
 
-      before subs
       = f.hidden_field :book_id, :value => @book.id
 
 
-
-
-
+      %p
+      %b Members:
+      %p
       = f.fields_for :members do |ffm|
+
         member:
+        = ffm.text_field :name
         = ffm.text_field :email, size: 30
         = ffm.link_to_remove "Remove this member?"
-      %p
-      %br
-      = f.link_to_add "Add a member", :members
+      %br/
 
+      = f.link_to_add "Add another member", :members
+      %br/
+      %br/
       %p= f.submit "Submit"
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  -#.book_field
-  -#  = f.label :title
-  -#  %br
-  -#  = f.text_field :title, size: 30
-  -#
-  -#.book_field
-  -#  = f.label :author
-  -#  %br
-  -#  = f.text_field :author, size: 30
-  -#
-  -#= f.fields_for :ifgroups do |ff|
-  -#  Ifgroup:
-  -#  = ff.text_field :group_name, size: 30
-  -#
-  -#= f.fields_for :members do |ffb|
-  -#  member:
-  -#  = ffb.text_field :email, size: 30
-  -#  = ffb.link_to_remove "Remove this member?"
-  -#%p
-  -#  %br
-  -#  = f.link_to_add "Add a member", :members
 
 

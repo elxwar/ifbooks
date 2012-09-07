@@ -49,7 +49,7 @@ class IfgroupsController < ApplicationController
   # GET /ifgroups/1/edit
   def edit
     @ifgroup = Ifgroup.find(params[:id])
-
+    @book = @ifgroup.book
   end
 
   # POST /ifgroups
@@ -60,7 +60,7 @@ class IfgroupsController < ApplicationController
 
     respond_to do |format|
       if @ifgroup.save
-        format.html { redirect_to @ifgroup, notice: 'Ifgroup, #{@ifgroup.group_name}, was successfully created.' }
+        format.html { redirect_to @ifgroup, notice: "Ifgroup, #{@ifgroup.group_name}, was successfully created." }
         format.json { render json: @ifgroup, status: :created, location: @ifgroup }
       else
         #format.html { render action: "register"}
@@ -77,7 +77,7 @@ class IfgroupsController < ApplicationController
 
     respond_to do |format|
       if @ifgroup.update_attributes(params[:ifgroup])
-        format.html { redirect_to @ifgroup, notice: 'Ifgroup, #{@ifgroup.group_name}, was successfully updated.' }
+        format.html { redirect_to @ifgroup, notice: "Ifgroup, #{@ifgroup.group_name}, was successfully updated." }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
