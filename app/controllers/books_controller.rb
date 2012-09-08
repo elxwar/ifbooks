@@ -1,7 +1,7 @@
 class BooksController < ::ApplicationController
-
   before_filter :find_all_books
   before_filter :find_page
+  before_filter :authorize
 
   def index
     # you can use meta fields from your model instead (e.g. browser_title)
@@ -41,6 +41,12 @@ class BooksController < ::ApplicationController
 
   def find_page
     @page = ::Refinery::Page.where(:link_url => "/books").first
+  end
+
+  def authorize
+    unless Ifgroup.find_by_id(session[:ifgroup_id])
+      redirect_to group_login_path, notice: 'Please log in to see this page', layout: nil
+    end
   end
 
 end

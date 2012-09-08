@@ -2,7 +2,7 @@ Ifbooks::Application.routes.draw do
 
   get 'admin' => 'admin#index'
 
-  controller :sessions do
+  controller :if_sessions do
     get     'group_login' => :new
     post    'group_login' => :create
     delete  'group_logout' => :destroy
@@ -10,11 +10,11 @@ Ifbooks::Application.routes.draw do
 
   get "admin/index"
 
-  get "sessions/new"
+  get "if_sessions/new"
 
-  get "sessions/create"
+  get "if_sessions/create"
 
-  get "sessions/destroy"
+  get "if_sessions/destroy"
 
   resources :ifgroups
 

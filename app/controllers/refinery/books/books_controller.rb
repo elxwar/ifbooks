@@ -4,6 +4,8 @@ module Refinery
 
       before_filter :find_all_books
       before_filter :find_page
+      before_filter :authorize, :except => :show
+      #skip_before_filter :authorize, :only => [ :show]
 
       def index
         # you can use meta fields from your model instead (e.g. browser_title)
@@ -29,6 +31,11 @@ module Refinery
         @page = ::Refinery::Page.where(:link_url => "/books").first
       end
 
+      def authorize
+        unless Ifgroup.find_by_id(session[:ifgroup_id])
+          redirect_to '/', notice: 'Please log in to see this page', layout: nil
+        end
+      end
     end
   end
 end

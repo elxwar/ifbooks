@@ -3,6 +3,8 @@ class IfgroupsController < ApplicationController
   before_filter :find_all_ifgroups
   before_filter :find_all_books
   before_filter :find_page
+  before_filter :authorize
+  skip_before_filter :authorize, only: [:register]
 
   # GET /ifgroups
   # GET /ifgroups.json
@@ -110,5 +112,12 @@ class IfgroupsController < ApplicationController
 
   def find_page
     @page = ::Refinery::Page.where(:link_url => "/ifgroups").first
+  end
+
+
+  def authorize
+    unless Ifgroup.find_by_id(session[:ifgroup_id])
+      redirect_to group_login_path, notice: 'Please log in to see this page', layout: nil
+    end
   end
 end

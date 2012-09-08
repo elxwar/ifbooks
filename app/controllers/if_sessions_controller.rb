@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+class IfSessionsController < ApplicationController
 
   before_filter :find_page
 
@@ -17,10 +17,10 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:ifgroup_id] = nil
-    #redirect_to login_url, notice: "You have logged out"
-    respond_to do |format|
-      format.html {render :layout => nil}
-    end
+    redirect_to group_login_url, notice: "You have logged out"
+    #respond_to do |format|
+    #  format.html {render :layout => nil}
+    #end
 
   end
 

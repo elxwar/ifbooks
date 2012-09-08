@@ -1,3 +1,5 @@
 %h1 Welcome
 It's #{Time.now}
 We have #{pluralize(@no_ifgroups, "group")}.
+
+= button_to 'Logout', group_logout_path, method: :delete
