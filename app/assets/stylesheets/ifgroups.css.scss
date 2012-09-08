@@ -1,3 +1,11 @@
-// Place all the styles related to the ifgroups controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "./partials/mixins";
+
+.fs_legend {
+  @include large-text();
+  font-weight: bold;
+}
+
+.fs_legend_sub {
+  @include large-text(1.2em);
+  font-weight: bold;
+}

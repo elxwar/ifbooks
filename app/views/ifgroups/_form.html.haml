@@ -11,82 +11,84 @@
 
 
   %p
-    -if notice
-      #notice= notice
+  -if notice
+    #notice= notice
+  %br/
+  %fieldset
+    %legend
+      .fs_legend Enter Group details:
+    %table
+      %tr
+        %td= f.label :group_name, 'Group Name:'
+        %td=f.text_field :group_name, size: 30
+      %tr
+        %td= f.label :password, 'Password:'
+        %td= f.password_field :password, size: 30
+      %tr
+        %td= f.label :password_confirmation, "Confirm Password:"
+        %td= f.password_field :password_confirmation, size: 30
+      %tr
+        %td= f.label :title, "Title (Ms/Mr...):"
+        %td= f.text_field :title, size: 30
+      %tr
+        %td= f.label :first_name, "First Name:"
+        %td= f.text_field :first_name, size: 30
+      %tr
+        %td= f.label :last_name
+        %td= f.text_field :last_name, size: 30
+      %tr
+        %td= f.label :school_name
+        %td= f.text_field :school_name, size: 30
+      %tr
+        %td= f.label :address1
+        %td= f.text_field :address1, size: 30
+      %tr
+        %td= f.label :address2
+        %td= f.text_field :address2, size: 30
+      %tr
+        %td= f.label :address3
+        %td= f.text_field :address3, size: 30
+      %tr
+        %td= f.label :town
+        %td= f.text_field :town, size: 30
+      %tr
+        %td= f.label :county
+        %td= f.text_field :county, size: 30
+      %tr
+        %td= f.label :post_code
+        %td= f.text_field :post_code, size: 30
+      %tr
+        %td= f.label :teacher_email
+        %td= f.text_field :teacher_email, size: 30
+      %tr
+        %td= f.label :group1_email
+        %td= f.text_field :group1_email, size: 30
+      %tr
+        %td= f.label :group2_email
+        %td= f.text_field :group2_email, size: 30
+      %tr
+        %td= f.label :invoice_to
+        %td= f.text_field :invoice_to, size: 30
+
+    = f.hidden_field :book_id, :value => @book.id
+
+
+    %p
     %fieldset
-      %legend Enter Group details
-      %table
-        %tr
-          %td= f.label :group_name, 'Group Name:'
-          %td=f.text_field :group_name, size: 30
-        %tr
-          %td= f.label :password, 'Password:'
-          %td= f.password_field :password, size: 30
-        %tr
-          %td= f.label :password_confirmation, "Confirm Password:"
-          %td= f.password_field :password_confirmation, size: 30
-        %tr
-          %td= f.label :title, "Title (Ms/Mr...):"
-          %td= f.text_field :title, size: 30
-        %tr
-          %td= f.label :first_name, "First Name:"
-          %td= f.text_field :first_name, size: 30
-        %tr
-          %td= f.label :last_name 
-          %td= f.text_field :last_name, size: 30
-        %tr
-          %td= f.label :school_name 
-          %td= f.text_field :school_name, size: 30
-        %tr
-          %td= f.label :address1 
-          %td= f.text_field :address1, size: 30
-        %tr
-          %td= f.label :address2 
-          %td= f.text_field :address2, size: 30
-        %tr
-          %td= f.label :address3 
-          %td= f.text_field :address3, size: 30
-        %tr
-          %td= f.label :town 
-          %td= f.text_field :town, size: 30
-        %tr
-          %td= f.label :county 
-          %td= f.text_field :county, size: 30
-        %tr
-          %td= f.label :post_code 
-          %td= f.text_field :post_code, size: 30
-        %tr
-          %td= f.label :teacher_email 
-          %td= f.text_field :teacher_email, size: 30
-        %tr
-          %td= f.label :group1_email 
-          %td= f.text_field :group1_email, size: 30
-        %tr
-          %td= f.label :group2_email 
-          %td= f.text_field :group2_email, size: 30
-        %tr
-          %td= f.label :invoice_to 
-          %td= f.text_field :invoice_to, size: 30
-
-      = f.hidden_field :book_id, :value => @book.id
-
-
-      %p
-      %b Members:
-      %p
+      %legend
+        .fs_legend_sub Add/Remove Members:
       = f.fields_for :members do |ffm|
-
-        member:
+        = ffm.label :name, 'Name: '
         = ffm.text_field :name
+        = ffm.label :email, 'Email address: '
         = ffm.text_field :email, size: 30
         = ffm.link_to_remove "Remove this member?"
       %br/
 
       = f.link_to_add "Add another member", :members
-      %br/
-      %br/
-      %p= f.submit "Submit"
-
+    %br/
+    %br/
+    %p= f.submit "Submit"
 
 
 
