@@ -1,5 +1,13 @@
 Ifbooks::Application.routes.draw do
 
+  get 'admin' => 'admin#index'
+
+  controller :sessions do
+    get     'group_login' => :new
+    post    'group_login' => :create
+    delete  'group_logout' => :destroy
+  end
+
   get "admin/index"
 
   get "sessions/new"
