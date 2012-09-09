@@ -1,16 +1,26 @@
 class IfgroupsController < ApplicationController
 
-  before_filter :authorize, :find_all_books, :find_page, :find_all_ifgroups
+  before_filter :find_all_ifgroups
+  before_filter :find_all_books
+  before_filter :find_page
+  before_filter :authorize
   skip_before_filter :authorize, only: [:register]
 
+  # GET /ifgroups
+  # GET /ifgroups.json
   def index
+    #@ifgroups = Ifgroup.all
+    @ifgroups = Ifgroup.order(:group_name)
 
     respond_to do |format|
+
       format.html # index.html.erb
       format.json { render json: @ifgroups }
     end
   end
 
+  # GET /ifgroups/1
+  # GET /ifgroups/1.json
   def show
     @ifgroup = Ifgroup.find(params[:id])
     @book = @ifgroup.book
@@ -78,6 +88,8 @@ class IfgroupsController < ApplicationController
     end
   end
 
+  # DELETE /ifgroups/1
+  # DELETE /ifgroups/1.json
   def destroy
     @ifgroup = Ifgroup.find(params[:id])
     @ifgroup.destroy
@@ -90,8 +102,22 @@ class IfgroupsController < ApplicationController
 
   protected
 
+  def find_all_books
+    @books = ::Refinery::Books::Book.order('position ASC')
+  end
+
+  def find_all_ifgroups
+    @ifgroups = Ifgroup.order('position ASC')
+  end
+
   def find_page
     @page = ::Refinery::Page.where(:link_url => "/ifgroups").first
   end
 
+
+  def authorize
+    unless Ifgroup.find_by_id(session[:ifgroup_id])
+      redirect_to group_login_path, notice: 'Please log in to see this page', layout: nil
+    end
+  end
 end

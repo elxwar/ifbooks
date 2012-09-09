@@ -1,0 +1,28 @@
+.login_form {
+  width: 340px;
+  label {
+    font-size: 14px;
+  }
+  .field {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    &.remember_me, &.forgot_password {
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+    &.forgot_password {
+      text-align: right;
+    }
+    &.remember_me label {
+      margin-top: 20px;
+    }
+    input{
+      float: right;
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+  input[type="submit"] {
+    float: right;
+  }
+}

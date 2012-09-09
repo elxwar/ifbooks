@@ -9,7 +9,7 @@ class IfSessionsController < ApplicationController
     ifgroup = Ifgroup.find_by_group_name(params[:group_name])
     if ifgroup and ifgroup.authenticate(params[:password])
       session[:ifgroup_id] = ifgroup.id
-      redirect_to admin_url
+      redirect_to welcome_url
     else
       redirect_to group_login_url, alert: "Invalid ifgroup/password combination"
     end
