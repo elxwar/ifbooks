@@ -4,7 +4,7 @@ class Ifgroup < ActiveRecord::Base
 
   #has_many :subscriptions, :dependent => :destroy
   belongs_to :book, :class_name => '::Book'
-  has_many :members, :class_name => '::Member'
+  has_many :members, :class_name => '::Member', :dependent => :destroy
   accepts_nested_attributes_for :members
   #accepts_nested_attributes_for :books
 

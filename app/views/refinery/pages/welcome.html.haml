@@ -1,0 +1,10 @@
+%section#top_bar_content
+  =raw @page.content_for(:top_bar)
+
+%section#body_content
+  =raw @page.content_for(:body)
+
+
+%section#side_body_content
+  = render 'book_list'
+
