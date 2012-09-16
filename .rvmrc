@@ -1,1 +1,2 @@
-rvm use --create 1.9.3-p125@ifbooks
+rvm use --create 1.9.3-p125@ifbooks_test
+

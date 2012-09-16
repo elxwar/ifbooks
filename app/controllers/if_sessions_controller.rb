@@ -7,9 +7,15 @@ class IfSessionsController < ApplicationController
 
   def create
     ifgroup = Ifgroup.find_by_group_name(params[:group_name])
-    if ifgroup and ifgroup.authenticate(params[:password])
+    if ifgroup
+      MyLog.debug ifgroup.id
+    else
+      MyLog.debug 'no ifgroup'
+    end
+    #MyLog.debug params[:password]
+    if ifgroup && ifgroup.authenticate(params[:password])
       session[:ifgroup_id] = ifgroup.id
-      redirect_to welcome_url
+      redirect_to '/'#welcome_url
     else
       redirect_to group_login_url, alert: "Invalid ifgroup/password combination"
     end

@@ -5,10 +5,12 @@ gem 'execjs'
 gem 'haml'
 gem 'thin'
 
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
+  gem 'rspec-rails'. '~> 2.0'
   gem 'pg'
 end
 

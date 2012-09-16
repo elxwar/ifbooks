@@ -25,7 +25,7 @@ class IfgroupsController < ApplicationController
   def new
     @ifgroup = Ifgroup.new
     @book = @books.find(params[:id])
-
+    MyLog.debug "ifgroup id = "
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @ifgroup }
@@ -49,9 +49,9 @@ class IfgroupsController < ApplicationController
   def create
     @ifgroup = Ifgroup.new(params[:ifgroup])
     #@book = @books.find(params[:id])
-
     respond_to do |format|
       if @ifgroup.save
+        MyLog.debug "SAVED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
         format.html { redirect_to @ifgroup, notice: "Ifgroup, #{@ifgroup.group_name}, was successfully created." }
         format.json { render json: @ifgroup, status: :created, location: @ifgroup }
       else

@@ -17,4 +17,5 @@ class Ifgroup < ActiveRecord::Base
   validates :school_name, :presence => true
   has_secure_password
 
+
 end
