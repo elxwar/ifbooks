@@ -16,7 +16,7 @@
       %header#header
         = render '/refinery/header'
       %section#page
-        -#= raw show_flash_message
+        = raw show_flash_message
         = yield
       %footer
         = render '/refinery/footer'
