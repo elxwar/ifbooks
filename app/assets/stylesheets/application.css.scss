@@ -167,3 +167,20 @@ footer {
     border-color: rgba(140,151,146,0.7);    
   }
 }
+
+
+//*******************NEEDS TiDYING*********************************
+
+.flash_alert, .flash_error, .flash_notice, .flash_success { padding:.4em 0; margin:0 0 2px 0; border:2px solid #ddd; font-size:1.6em; text-align:center;}
+
+.flash_error { background:#FBE3E4;color:#8a1f11;border-color:#FBC2C4; }
+.flash_notice { background:#FFF6BF;color:#514721;border-color:#FFD324; }
+.flash_success { background:#DDFCD5;color:#000;border-color:#44A815; }
+.flash_alert { background:#FBE3E4;color:#8a1f11;border-color:#FBC2C4; }
+
+.flash_error a {color:#8a1f11;}
+.flash_notice a {color:#514721;}
+.flash_success a {color:#264409;}
+.flash_alert a {color:#8a1f11;}
+
+//*******************END NEEDS TiDYING*****************************

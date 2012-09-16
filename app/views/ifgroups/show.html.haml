@@ -61,6 +61,8 @@
       %td
         = m.email
 
-= link_to 'Edit Group and Member Details', edit_ifgroup_path(@ifgroup)
+= button_to 'Edit Group and Member Details', edit_ifgroup_path(@ifgroup)
 |
-= link_to 'Back', '/'
+= button_to 'Back', '/'
+
+= button_to 'Logout', group_logout_path, method: :delete

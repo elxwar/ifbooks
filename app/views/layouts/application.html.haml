@@ -1,0 +1,24 @@
+!!!
+- if @page[:title][0,6].downcase =="school" or @page[:title][0,5].downcase=="books" or @page[:title][0,2]=="if"
+  - @logo = 'logoforschools'
+  - @containerclass = 'schools'
+- else
+  - @logo = 'logo'
+  - @containerclass = ''
+= render '/refinery/html_tag'
+- site_bar = render('/refinery/site_bar', :head => true)
+= render '/refinery/head'
+%body
+  %div{:class => "container #{@containerclass}"}
+    = site_bar
+    = render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/
+    #page_container
+      %header#header
+        = render '/refinery/header'
+      %section#page
+        -#= raw show_flash_message
+        = yield
+      %footer
+        = render '/refinery/footer'
+    = render '/refinery/javascripts'
+  / <haml:loud>  debug(params) </haml:loud>

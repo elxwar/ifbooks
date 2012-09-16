@@ -11,9 +11,15 @@ ApplicationController.class_eval do
   end
 
   def authorize
-    #unless Ifgroup.find_by_id(session[:ifgroup_id])
-    #  redirect_to group_login_path, notice: 'Please log in to see this page', layout: nil
-    #end
+    if Ifgroup.find_by_id(session[:ifgroup_id]) and Ifgroup.find_by_id(session[:ifgroup_id]).id.to_s == params[:id]
+
+      #flash[:notice] = Ifgroup.find_by_id(session[:ifgroup_id]).id.to_s + ' ' + params[:id]
+
+    else
+
+      redirect_to group_login_path, notice: 'Please log in to see this page', layout: nil
+
+    end
   end
 
 end

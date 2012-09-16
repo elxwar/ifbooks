@@ -1,7 +1,7 @@
 class IfgroupsController < ApplicationController
 
   before_filter :authorize, :find_all_books, :find_page, :find_all_ifgroups
-  skip_before_filter :authorize, only: [:register]
+  skip_before_filter :authorize, only: [:register, :new, :create]
 
   def index
 
