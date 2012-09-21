@@ -11,6 +11,36 @@
     <section id='book_body_content'>
       <%=raw @book.description_for_schools %>
     </section>
+
+    TEST BOOK FILE LINKS - will be restricted to only logged on users but visible to all for testing!
+    <br/>
+    If there are no links below, none have been added to the book yet...
+    <section>
+
+      <p>
+        <% if @book.file1.present? %>
+          <h1>File1</h1>
+          <%= link_to 'file1', @book.file1.url %>
+          <br/>
+        <% end %>
+
+        <% if @book.file2.present? %>
+          <h1>File2</h1>
+          <%= link_to 'file2', @book.file2.url %>
+          <br/>
+        <% end %>
+
+        <% if @book.file3.present? %>
+          <h1>File3</h1>
+          <%= link_to 'file3', @book.file3.url %>
+
+        <% end %>
+
+    </section>
+
+
+
+
   </div>
   <div class="right_of_page">
     <div class =" vid_frame">
@@ -45,4 +75,5 @@
     <%#= render '/refinery/content_page' %>
   <% end %>
   <%#*****************END OF COMMENTED OUT*****************%>
+
 </div>

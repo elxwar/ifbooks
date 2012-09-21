@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120723182100) do
+ActiveRecord::Schema.define(:version => 20120921122836) do
 
   create_table "memberships", :force => true do |t|
     t.integer  "ifgroup_id"
@@ -63,6 +63,16 @@ ActiveRecord::Schema.define(:version => 20120723182100) do
     t.text     "description_for_schools"
     t.text     "description_for_groups"
     t.string   "video_url"
+    t.integer  "file1_id"
+    t.integer  "file2_id"
+    t.integer  "file3_id"
+    t.integer  "file4_id"
+    t.integer  "file5_id"
+    t.integer  "file6_id"
+    t.integer  "file7_id"
+    t.integer  "file8_id"
+    t.integer  "file9_id"
+    t.integer  "file10_id"
   end
 
   create_table "refinery_ifgroups", :force => true do |t|
