@@ -1,3 +1,7 @@
+#Refinery::Core::Engine.routes.prepend do
+#  get '/welcome', :to => 'pages#welcome', :as => 'welcome'
+#end
+
 Ifbooks::Application.routes.draw do
 
   get 'admin' => 'admin#index'

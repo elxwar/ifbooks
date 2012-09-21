@@ -52,7 +52,7 @@ class IfgroupsController < ApplicationController
     respond_to do |format|
       if @ifgroup.save
         MyLog.debug "SAVED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-        format.html { redirect_to @ifgroup, notice: "Ifgroup, #{@ifgroup.group_name}, was successfully created." }
+        format.html { redirect_to '/welcome', notice: "Ifgroup, #{@ifgroup.group_name}, was successfully created." }
         format.json { render json: @ifgroup, status: :created, location: @ifgroup }
       else
         #format.html { render action: "register"}
